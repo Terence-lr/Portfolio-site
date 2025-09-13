@@ -1,38 +1,73 @@
 import { ExternalLink, Github } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import type { Project } from "@shared/schema";
 
 export default function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: "Project One",
-      description: "A responsive web application built with vanilla JavaScript. Features include dynamic content loading, local storage, and mobile-first design.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-      alt: "Modern web dashboard interface",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      demoLink: "#",
-      codeLink: "#"
-    },
-    {
-      id: 2,
-      title: "Project Two", 
-      description: "An interactive portfolio website showcasing responsive design principles and CSS animations. Includes contact form validation and smooth scrolling navigation.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-      alt: "E-commerce website displayed on laptop",
-      technologies: ["HTML", "SCSS", "JavaScript"],
-      demoLink: "#",
-      codeLink: "#"
-    },
-    {
-      id: 3,
-      title: "Project Three",
-      description: "My first React application - a task management app with component-based architecture. Features state management, conditional rendering, and props handling.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-      alt: "Mobile app interface on smartphone screen",
-      technologies: ["React", "CSS", "JavaScript"],
-      demoLink: "#",
-      codeLink: "#"
+  const { data: projects, isLoading, error } = useQuery<Project[]>({
+    queryKey: ['/api/projects', 'featured'],
+    queryFn: async () => {
+      const res = await fetch('/api/projects?featured=true');
+      if (!res.ok) {
+        throw new Error(`Failed to fetch projects: ${res.statusText}`);
+      }
+      return res.json();
     }
-  ];
+  });
+
+  if (isLoading) {
+    return (
+      <section id="projects" className="py-20 bg-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-projects-title">
+              Featured Projects
+            </h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-projects-description">
+              Here are some projects I've been working on. Each one taught me something new and helped me grow as a developer.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="project-card bg-card rounded-xl shadow-md overflow-hidden animate-pulse">
+                <div className="w-full h-48 bg-muted"></div>
+                <div className="p-6">
+                  <div className="h-6 bg-muted rounded mb-2"></div>
+                  <div className="h-4 bg-muted rounded mb-4"></div>
+                  <div className="flex gap-2 mb-4">
+                    <div className="h-6 w-16 bg-muted rounded"></div>
+                    <div className="h-6 w-20 bg-muted rounded"></div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="h-6 w-20 bg-muted rounded"></div>
+                    <div className="h-6 w-16 bg-muted rounded"></div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section id="projects" className="py-20 bg-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-projects-title">
+              Featured Projects
+            </h2>
+            <p className="text-muted-foreground" data-testid="text-projects-error">
+              Unable to load projects at the moment. Please try again later.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="projects" className="py-20 bg-background">
@@ -48,15 +83,15 @@ export default function Projects() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {projects && projects.length > 0 ? projects.map((project) => (
             <div 
               key={project.id}
               className="project-card bg-card rounded-xl shadow-md overflow-hidden"
               data-testid={`card-project-${project.id}`}
             >
               <img 
-                src={project.image}
-                alt={project.alt}
+                src={project.imageUrl}
+                alt={`${project.title} screenshot`}
                 className="w-full h-48 object-cover"
                 data-testid={`img-project-${project.id}`}
               />
@@ -72,33 +107,45 @@ export default function Projects() {
                     <span 
                       key={tech}
                       className="bg-muted text-muted-foreground px-2 py-1 rounded text-xs"
-                      data-testid={`tech-${tech.toLowerCase()}-${project.id}`}
+                      data-testid={`tech-${tech.toLowerCase().replace(/\s+/g, '-')}-${project.id}`}
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <a 
-                    href={project.demoLink}
-                    className="text-accent hover:text-accent/80 transition-colors flex items-center gap-1"
-                    data-testid={`link-demo-${project.id}`}
-                  >
-                    <ExternalLink className="h-3 w-3" />
-                    <span className="text-sm">Live Demo</span>
-                  </a>
-                  <a 
-                    href={project.codeLink}
-                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
-                    data-testid={`link-code-${project.id}`}
-                  >
-                    <Github className="h-3 w-3" />
-                    <span className="text-sm">Code</span>
-                  </a>
+                  {project.demoUrl && (
+                    <a 
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-accent/80 transition-colors flex items-center gap-1"
+                      data-testid={`link-demo-${project.id}`}
+                    >
+                      <ExternalLink className="h-3 w-3" />
+                      <span className="text-sm">Live Demo</span>
+                    </a>
+                  )}
+                  {project.codeUrl && (
+                    <a 
+                      href={project.codeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+                      data-testid={`link-code-${project.id}`}
+                    >
+                      <Github className="h-3 w-3" />
+                      <span className="text-sm">Code</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
-          ))}
+          )) : (
+            <div className="col-span-full text-center text-muted-foreground">
+              <p>No featured projects available at the moment.</p>
+            </div>
+          )}
         </div>
         
         <div className="text-center mt-12">
