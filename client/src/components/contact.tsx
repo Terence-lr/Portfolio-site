@@ -41,9 +41,9 @@ export default function Contact() {
 
   const lookingFor = [
     "Junior/Entry-level Developer positions",
-    "Mentorship and learning opportunities", 
+    "AI-first development opportunities", 
     "Collaborative team environment",
-    "Remote or Seattle-based roles"
+    "Remote or New York-based roles"
   ];
 
   return (
@@ -56,7 +56,7 @@ export default function Contact() {
           <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-contact-description">
             I'm actively looking for junior developer opportunities and would love to hear from you. 
-            Let's connect and discuss how I can contribute to your team!
+            Let's connect and discuss how I can contribute to your team with my AI-first development approach!
           </p>
         </div>
         
@@ -75,11 +75,11 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-foreground">Email</p>
                     <a 
-                      href="mailto:alex.johnson@email.com"
+                      href="mailto:terence.richardson@pursuit.org"
                       className="text-muted-foreground hover:text-accent transition-colors"
                       data-testid="link-email"
                     >
-                      alex.johnson@email.com
+                      terence.richardson@pursuit.org
                     </a>
                   </div>
                 </div>
@@ -91,11 +91,11 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-foreground">LinkedIn</p>
                     <a 
-                      href="https://linkedin.com/in/alexjohnson"
+                      href="https://www.linkedin.com/in/terence-richardson-13b22a211/"
                       className="text-muted-foreground hover:text-accent transition-colors"
                       data-testid="link-linkedin"
                     >
-                      linkedin.com/in/alexjohnson
+                      linkedin.com/in/terence-richardson-13b22a211
                     </a>
                   </div>
                 </div>
@@ -107,11 +107,29 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-foreground">GitHub</p>
                     <a 
-                      href="https://github.com/alexjohnson"
+                      href="https://github.com/Terence-lr"
                       className="text-muted-foreground hover:text-accent transition-colors"
                       data-testid="link-github"
                     >
-                      github.com/alexjohnson
+                      github.com/Terence-lr
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4" data-testid="contact-twitter">
+                  <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                    <svg className="text-white h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground">Twitter/X</p>
+                    <a 
+                      href="https://x.com/Terensujin"
+                      className="text-muted-foreground hover:text-accent transition-colors"
+                      data-testid="link-twitter"
+                    >
+                      x.com/Terensujin
                     </a>
                   </div>
                 </div>

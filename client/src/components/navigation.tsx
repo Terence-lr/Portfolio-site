@@ -48,7 +48,7 @@ export default function Navigation() {
             onClick={() => scrollToSection("home")}
             data-testid="logo-home"
           >
-            Alex Johnson
+            Terence Richardson
           </div>
           
           {/* Desktop Navigation */}

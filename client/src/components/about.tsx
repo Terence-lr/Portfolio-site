@@ -14,8 +14,8 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=800" 
-              alt="Alex Johnson - Professional headshot" 
+              src="/attached_assets/IMG_1903_Original_1757795445664.jpg" 
+              alt="Terence Richardson - Professional headshot" 
               className="rounded-xl shadow-lg w-full max-w-sm mx-auto"
               data-testid="img-about-photo"
             />
@@ -26,27 +26,27 @@ export default function About() {
               My Journey Into Tech
             </h3>
             <p className="text-muted-foreground leading-relaxed" data-testid="text-about-paragraph-1">
-              After five years in marketing, I discovered my passion for coding through a curiosity about how websites work. 
-              What started as weekend tutorials quickly became a full-time commitment to changing careers.
+              Currently enrolled in the Pursuit AI Native coding bootcamp, I'm transitioning into tech as an AI-first developer. 
+              My journey combines traditional development skills with cutting-edge AI integration and prompt engineering.
             </p>
             <p className="text-muted-foreground leading-relaxed" data-testid="text-about-paragraph-2">
-              I've spent the last 8 months immersing myself in web development fundamentals, building projects, 
-              and learning from the amazing developer community. My background in marketing gives me a unique 
-              perspective on creating user-focused solutions.
+              I'm building solutions through both hands-on development and strategic prompt engineering, 
+              learning to leverage AI tools to create more efficient and innovative applications. 
+              This unique approach gives me a modern perspective on problem-solving in tech.
             </p>
             <p className="text-muted-foreground leading-relaxed" data-testid="text-about-paragraph-3">
-              I'm excited to bring my problem-solving skills, attention to detail, and fresh perspective 
-              to a development team where I can continue growing and contributing meaningful work.
+              I'm excited to bring my fresh perspective on AI-native development, problem-solving skills, 
+              and enthusiasm for emerging technologies to a forward-thinking development team.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
               <div className="flex items-center gap-2 text-muted-foreground" data-testid="info-location">
                 <MapPin className="h-4 w-4 text-accent" />
-                <span>Seattle, WA</span>
+                <span>New York, NY</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground" data-testid="info-education">
                 <GraduationCap className="h-4 w-4 text-accent" />
-                <span>Self-taught Developer</span>
+                <span>Pursuit AI Native Bootcamp</span>
               </div>
             </div>
           </div>
