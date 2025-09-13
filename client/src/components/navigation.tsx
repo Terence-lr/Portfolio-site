@@ -39,11 +39,12 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-card/80 backdrop-blur-md border-b border-border z-50">
+    <nav className="fixed top-0 left-0 right-0 backdrop-blur-md border-b border-border z-50" style={{ backgroundColor: 'rgba(26, 54, 93, 0.95)' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div 
-            className="text-xl font-bold text-primary cursor-pointer"
+            className="text-xl font-bold cursor-pointer"
+            style={{ color: 'white' }}
             onClick={() => scrollToSection("home")}
             data-testid="logo-home"
           >
@@ -58,8 +59,8 @@ export default function Navigation() {
                 onClick={() => scrollToSection(item.id)}
                 className={`transition-colors ${
                   activeSection === item.id
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-primary"
+                    ? "text-white font-medium"
+                    : "text-gray-300 hover:text-white"
                 }`}
                 data-testid={`nav-${item.id}`}
               >
@@ -83,8 +84,8 @@ export default function Navigation() {
                     onClick={() => scrollToSection(item.id)}
                     className={`text-left py-2 transition-colors ${
                       activeSection === item.id
-                        ? "text-primary font-medium"
-                        : "text-muted-foreground hover:text-primary"
+                        ? "text-blue-600 font-medium"
+                        : "text-gray-600 hover:text-blue-600"
                     }`}
                     data-testid={`nav-mobile-${item.id}`}
                   >

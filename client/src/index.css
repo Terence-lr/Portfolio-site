@@ -4,25 +4,25 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(234.55deg 29.73% 36.27%);
-  --foreground: hsl(0deg 2.78% 28.24%);
+  --background: hsl(210, 55%, 95%);
+  --foreground: hsl(207, 43%, 18%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222, 47%, 11%);
+  --card-foreground: hsl(207, 43%, 18%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222, 47%, 11%);
-  --primary: hsl(222, 47%, 11%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(222, 47%, 11%);
-  --muted: hsl(210, 40%, 96%);
-  --muted-foreground: hsl(0deg 66.67% 1.18%);
-  --accent: hsl(217, 91%, 60%);
-  --accent-foreground: hsl(222, 47%, 11%);
+  --popover-foreground: hsl(207, 43%, 18%);
+  --primary: hsl(207, 43%, 18%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 55%, 97%);
+  --secondary-foreground: hsl(207, 43%, 18%);
+  --muted: hsl(210, 55%, 97%);
+  --muted-foreground: hsl(207, 20%, 45%);
+  --accent: hsl(209, 78%, 46%);
+  --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(356.3033, 90.5579%, 54.3137%);
   --destructive-foreground: hsl(0, 0%, 100%);
   --border: hsl(214, 32%, 91%);
-  --input: hsl(200, 23.0769%, 97.4510%);
-  --ring: hsl(215, 16%, 47%);
+  --input: hsl(210, 40%, 98%);
+  --ring: hsl(209, 78%, 46%);
   --chart-1: hsl(203.8863, 88.2845%, 53.1373%);
   --chart-2: hsl(159.7826, 100%, 36.0784%);
   --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
@@ -53,25 +53,25 @@
 }
 
 .dark {
-  --background: hsl(224, 71%, 4%);
-  --foreground: hsl(213, 31%, 91%);
-  --card: hsl(224, 71%, 4%);
-  --card-foreground: hsl(213, 31%, 91%);
-  --popover: hsl(224, 71%, 4%);
-  --popover-foreground: hsl(213, 31%, 91%);
-  --primary: hsl(213, 31%, 91%);
-  --primary-foreground: hsl(224, 71%, 4%);
-  --secondary: hsl(215, 28%, 17%);
-  --secondary-foreground: hsl(213, 31%, 91%);
-  --muted: hsl(215, 28%, 17%);
-  --muted-foreground: hsl(217, 10%, 65%);
-  --accent: hsl(217, 91%, 60%);
-  --accent-foreground: hsl(213, 31%, 91%);
+  --background: hsl(207, 43%, 18%);
+  --foreground: hsl(0, 0%, 100%);
+  --card: hsl(207, 43%, 18%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --popover: hsl(207, 43%, 18%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --primary: hsl(207, 43%, 18%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(207, 35%, 25%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(207, 35%, 25%);
+  --muted-foreground: hsl(210, 20%, 70%);
+  --accent: hsl(209, 78%, 46%);
+  --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(356.3033, 90.5579%, 54.3137%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(215, 28%, 17%);
-  --input: hsl(207.6923, 27.6596%, 18.4314%);
-  --ring: hsl(217, 10%, 65%);
+  --border: hsl(207, 35%, 25%);
+  --input: hsl(207, 35%, 25%);
+  --ring: hsl(209, 78%, 46%);
   --chart-1: hsl(203.8863, 88.2845%, 53.1373%);
   --chart-2: hsl(159.7826, 100%, 36.0784%);
   --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
@@ -114,7 +114,7 @@ html {
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(217, 91%, 60%) 100%);
+  background: linear-gradient(135deg, hsl(207, 43%, 18%) 0%, hsl(209, 78%, 46%) 100%);
 }
 
 .skill-badge {

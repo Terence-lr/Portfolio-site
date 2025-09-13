@@ -7,7 +7,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="gradient-bg text-primary-foreground">
+    <section id="home" className="gradient-bg text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-testid="text-hero-name">

@@ -2,7 +2,7 @@ import { MapPin, GraduationCap } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-20" style={{ backgroundColor: '#f7fafc' }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-about-title">
@@ -10,7 +10,7 @@ export default function About() {
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto"></div>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img 
@@ -20,7 +20,7 @@ export default function About() {
               data-testid="img-about-photo"
             />
           </div>
-          
+
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-primary mb-4" data-testid="text-about-journey-title">
               My Journey Into Tech
@@ -38,7 +38,7 @@ export default function About() {
               I'm excited to bring my problem-solving skills, attention to detail, and fresh perspective 
               to a development team where I can continue growing and contributing meaningful work.
             </p>
-            
+
             <div className="flex flex-wrap gap-4 pt-4">
               <div className="flex items-center gap-2 text-muted-foreground" data-testid="info-location">
                 <MapPin className="h-4 w-4 text-accent" />

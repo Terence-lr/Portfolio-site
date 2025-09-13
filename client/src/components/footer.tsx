@@ -2,7 +2,7 @@ import { Mail, Linkedin, Github } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground py-8">
+    <footer className="py-8" style={{ backgroundColor: '#1a365d', color: 'white' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="mb-4" data-testid="text-copyright">
