@@ -1,3 +1,5 @@
+import profilePhoto from "@assets/IMG_1903_Original_1757873321619.jpg";
+
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -10,6 +12,12 @@ export default function Hero() {
     <section id="home" className="gradient-bg text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
         <div className="text-center">
+          <img 
+            src={profilePhoto}
+            alt="Terence Richardson - Junior Developer"
+            className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-8 shadow-2xl border-4 border-white/20"
+            data-testid="img-profile-photo"
+          />
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-testid="text-hero-name">
             Hi, I'm Terence Richardson
           </h1>
