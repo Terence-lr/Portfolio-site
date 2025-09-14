@@ -10,7 +10,8 @@ export default function Footer() {
             <img 
               src={logoImage}
               alt="TerenceLR Logo"
-              className="h-16 w-auto mx-auto opacity-90 hover:opacity-100 transition-opacity"
+              className="h-20 w-auto mx-auto opacity-90 hover:opacity-100 transition-opacity"
+              style={{ backgroundColor: 'transparent' }}
             />
           </div>
           <p className="mb-4" data-testid="text-copyright">

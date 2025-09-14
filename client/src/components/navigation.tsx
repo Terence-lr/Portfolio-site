@@ -51,8 +51,8 @@ export default function Navigation() {
             <img 
               src={logoImage}
               alt="TerenceLR Logo"
-              className="h-12 w-auto max-w-[120px] object-contain"
-              style={{ filter: 'brightness(1.1)' }}
+              className="h-16 w-auto max-w-[160px] object-contain"
+              style={{ filter: 'brightness(1.1)', backgroundColor: 'transparent' }}
             />
           </div>
           
