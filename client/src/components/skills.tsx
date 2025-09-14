@@ -54,7 +54,7 @@ export default function Skills() {
             style={{ width: `${level}%` }}
           ></div>
         </div>
-        <span className="text-xs text-muted-foreground font-medium min-w-[2.5rem] text-right">{level}%</span>
+        <span className="text-xs text-muted-foreground font-medium w-8 text-right flex-shrink-0">{level}%</span>
       </div>
     </div>
   );
