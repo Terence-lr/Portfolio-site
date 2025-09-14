@@ -1,10 +1,22 @@
 import { Mail, Linkedin, Github } from "lucide-react";
+import logoImage from "@assets/Bazaart_1757875688820.png";
 
 export default function Footer() {
   return (
     <footer className="py-8" style={{ backgroundColor: '#1a365d', color: 'white' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
+          <div className="mb-6" data-testid="footer-logo">
+            <img 
+              src={logoImage}
+              alt="TerenceLR Logo"
+              className="h-20 w-auto mx-auto opacity-90 hover:opacity-100 transition-opacity"
+              style={{ 
+                objectPosition: 'center top',
+                clipPath: 'inset(0 0 15% 0)'
+              }}
+            />
+          </div>
           <p className="mb-4" data-testid="text-copyright">
             &copy; 2024 Terence Richardson. All rights reserved.
           </p>

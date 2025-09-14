@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import logoImage from "@assets/Bazaart_1757875688820.png";
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("home");
@@ -43,12 +44,20 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div 
-            className="text-xl font-bold cursor-pointer"
-            style={{ color: 'white' }}
+            className="cursor-pointer flex items-center"
             onClick={() => scrollToSection("home")}
             data-testid="logo-home"
           >
-            Terence Richardson
+            <img 
+              src={logoImage}
+              alt="TerenceLR Logo"
+              className="h-14 w-auto object-contain"
+              style={{ 
+                filter: 'brightness(1.1)',
+                objectPosition: 'center top',
+                clipPath: 'inset(0 0 15% 0)'
+              }}
+            />
           </div>
           
           {/* Desktop Navigation */}
