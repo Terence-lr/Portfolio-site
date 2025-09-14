@@ -1,4 +1,5 @@
 import { MapPin, GraduationCap } from "lucide-react";
+import aboutPhoto from "@assets/I38A1308_1757873611775.jpeg";
 
 export default function About() {
   return (
@@ -14,7 +15,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="/attached_assets/IMG_1903_Original_1757873059220.jpg" 
+              src={aboutPhoto} 
               alt="Terence Richardson - Professional headshot" 
               className="rounded-xl shadow-lg w-full max-w-sm mx-auto"
               data-testid="img-about-photo"
