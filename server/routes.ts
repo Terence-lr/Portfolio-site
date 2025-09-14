@@ -212,6 +212,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Seed route to add Distance Converter project
+  app.post("/api/seed/distance-converter", async (req, res) => {
+    try {
+      const distanceConverterProject = {
+        title: "Distance Converter",
+        description: "A practical web application that converts between different distance units (miles, kilometers, feet, meters). Features a clean interface and real-time conversion calculations, demonstrating core programming concepts and user experience design.",
+        imageUrl: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        technologies: ["HTML", "CSS", "JavaScript", "Responsive Design", "Git"],
+        demoUrl: "https://terence-lr.github.io/distance-converter",
+        codeUrl: "https://github.com/Terence-lr/distance-converter",
+        featured: true,
+        orderIndex: 1
+      };
+      
+      const project = await storage.createProject(distanceConverterProject);
+      res.status(201).json(project);
+    } catch (error) {
+      console.error("Error seeding Distance Converter project:", error);
+      res.status(500).json({ error: "Failed to seed Distance Converter project" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
