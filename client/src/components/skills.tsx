@@ -47,12 +47,14 @@ export default function Skills() {
         <i className={`${icon} ${color} text-2xl mr-4`}></i>
         <span className="font-medium">{name}</span>
       </div>
-      <div className="w-32 bg-secondary rounded-full h-3 relative">
-        <div 
-          className="h-3 rounded-full bg-gradient-to-r from-accent to-primary transition-all duration-500"
-          style={{ width: `${level}%` }}
-        ></div>
-        <span className="absolute right-2 top-0 text-xs text-muted-foreground font-medium">{level}%</span>
+      <div className="flex items-center gap-3">
+        <div className="w-24 bg-secondary rounded-full h-3 relative">
+          <div 
+            className="h-3 rounded-full bg-gradient-to-r from-accent to-primary transition-all duration-500"
+            style={{ width: `${level}%` }}
+          ></div>
+        </div>
+        <span className="text-xs text-muted-foreground font-medium min-w-[2.5rem] text-right">{level}%</span>
       </div>
     </div>
   );
