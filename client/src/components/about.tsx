@@ -14,7 +14,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="/attached_assets/IMG_1903_Original_1757795445664.jpg" 
+              src="/attached_assets/IMG_1903_Original_1757873059220.jpg" 
               alt="Terence Richardson - Professional headshot" 
               className="rounded-xl shadow-lg w-full max-w-sm mx-auto"
               data-testid="img-about-photo"
