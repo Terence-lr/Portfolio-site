@@ -15,7 +15,7 @@ export default function Hero() {
           <img 
             src={profilePhoto}
             alt="Terence Richardson - Junior Developer"
-            className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-8 shadow-2xl border-4 border-white/20"
+            className="w-40 h-40 sm:w-48 sm:h-48 rounded-full mx-auto mb-8 shadow-2xl border-4 border-white/20"
             data-testid="img-profile-photo"
           />
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" data-testid="text-hero-name">
