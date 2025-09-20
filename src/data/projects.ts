@@ -44,7 +44,7 @@ export const projects: Project[] = [
       'SEO-friendly with per-page metadata'
     ],
     role: 'Solo builder',
-    year: '2024',
+    year: '2025',
     cta: {
       demo: 'View Live Site',
       repo: 'View Source'
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     summary: 'Multi-user job-hunt dashboard to organize applications and track progress.',
     microTagline: 'Clarity for the grind.',
     tech: ['React', 'Firebase', 'Vercel'],
-    repoUrl: 'https://github.com/Terence-lr/total-job-tracker',
+    repoUrl: 'https://github.com/Terence-lr/total-job-tracker-',
     demoUrl: 'https://total-job-tracker.vercel.app',
     preview: {
       cover: '/previews/job-tracker/job-tracker-cover.svg',
@@ -71,7 +71,7 @@ export const projects: Project[] = [
       'Filtered views and fast search'
     ],
     role: 'Solo builder',
-    year: '2024',
+    year: '2025',
     cta: {
       demo: 'Try Demo',
       repo: 'View Source'
@@ -98,7 +98,7 @@ export const projects: Project[] = [
       'Lightweight and instantly deployable'
     ],
     role: 'Solo builder',
-    year: '2024',
+    year: '2025',
     cta: {
       demo: 'Try Converter',
       repo: 'View Source'
