@@ -70,19 +70,17 @@
 .button.secondary {
   background: transparent;
   color: var(--text);
-  border: 2px solid var(--border);
+  border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .button.secondary:hover {
-  border-color: var(--brand);
   color: var(--brand);
   background: rgba(220, 20, 60, 0.05);
   box-shadow: 0 8px 24px rgba(220, 20, 60, 0.2);
 }
 
 .button.secondary.hovered {
-  border-color: var(--brand-light);
   color: var(--brand-light);
   background: rgba(220, 20, 60, 0.1);
   box-shadow: 0 8px 24px rgba(220, 20, 60, 0.3);
@@ -202,7 +200,6 @@
   }
   
   .button.secondary.hovered {
-    border-color: var(--brand);
     color: var(--brand);
     background: rgba(220, 20, 60, 0.05);
   }
