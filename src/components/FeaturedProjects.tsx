@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { projects } from '@/data/projects';
 import ProjectCard from './ProjectCard';
-import MagneticButton from './MagneticButton';
+import Button from './ui/Button';
 import styles from './FeaturedProjects.module.css';
 
 export default function FeaturedProjects() {
@@ -31,13 +31,13 @@ export default function FeaturedProjects() {
         </div>
         
                 <div ref={viewAllRef} className={`${styles.viewAll} scroll-reveal`}>
-                  <MagneticButton
+                  <Button
                     href="/projects"
                     variant="secondary"
-                    className="magnetic"
+                    size="md"
                   >
                     View All Projects
-                  </MagneticButton>
+                  </Button>
                 </div>
       </div>
     </section>

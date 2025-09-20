@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
+import Button from './ui/Button';
 import styles from './Navigation.module.css';
 
 const navItems = [
@@ -105,15 +106,19 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <Button
+            variant="ghost"
+            size="sm"
             className={styles.mobileMenuButton}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-nav-menu"
           >
             <span className={styles.hamburger}></span>
             <span className={styles.hamburger}></span>
             <span className={styles.hamburger}></span>
-          </button>
+          </Button>
         </div>
 
         {/* Mobile Navigation */}

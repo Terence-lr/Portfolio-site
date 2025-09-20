@@ -114,9 +114,6 @@
   display: none;
   flex-direction: column;
   gap: 4px;
-  background: none;
-  border: none;
-  cursor: pointer;
   padding: var(--space-sm);
 }
 

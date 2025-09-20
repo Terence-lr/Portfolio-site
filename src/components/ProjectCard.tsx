@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState, useRef } from 'react';
 import { Project } from '@/data/projects';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import MagneticButton from './MagneticButton';
+import Button from './ui/Button';
 import styles from './ProjectCard.module.css';
 
 interface ProjectCardProps {
@@ -106,26 +106,26 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         
         <div className={styles.projectActions}>
-          <MagneticButton
+          <Button
             href={project.demoUrl}
             variant="primary"
+            size="md"
             target="_blank"
             rel="noopener noreferrer"
-            className="magnetic"
             aria-label={`View live demo of ${project.title}`}
           >
             {project.cta.demo}
-          </MagneticButton>
-          <MagneticButton
+          </Button>
+          <Button
             href={project.repoUrl}
             variant="secondary"
+            size="md"
             target="_blank"
             rel="noopener noreferrer"
-            className="magnetic"
             aria-label={`View source code for ${project.title} on GitHub`}
           >
             {project.cta.repo}
-          </MagneticButton>
+          </Button>
         </div>
       </div>
     </article>

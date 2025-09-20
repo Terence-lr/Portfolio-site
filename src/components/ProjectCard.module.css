@@ -161,29 +161,11 @@
   margin-top: auto;
   padding-top: var(--space-lg);
   flex-shrink: 0; /* Prevent actions from shrinking */
-}
-
-.projectActions .btn {
-  flex: 1;
-  text-align: center;
-  font-size: 0.9rem;
-  padding: var(--space-sm) var(--space-md);
-  min-height: 44px; /* Ensure minimum touch target */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap; /* Prevent button text wrapping */
-}
-
-/* Enhanced focus states for accessibility */
-.projectActions .btn:focus-visible {
-  outline: 2px solid var(--brand);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(220, 20, 60, 0.2);
+  align-items: baseline;
 }
 
 /* Responsive breakpoints */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .projectCard {
     min-height: 500px; /* Reduce min-height on very small screens */
   }
@@ -199,26 +181,11 @@
   .projectActions {
     flex-direction: column;
     gap: var(--space-sm);
-  }
-  
-  .projectActions .btn {
-    flex: none;
-    width: 100%;
-    font-size: 0.85rem;
+    align-items: stretch;
   }
 }
 
 @media (max-width: 768px) {
-  .projectActions {
-    flex-direction: column;
-    gap: var(--space-sm);
-  }
-  
-  .projectActions .btn {
-    flex: none;
-    width: 100%;
-  }
-  
   .projectHeader {
     flex-direction: column;
     gap: var(--space-sm);

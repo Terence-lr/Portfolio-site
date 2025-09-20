@@ -111,30 +111,8 @@
   border: 1px solid var(--border);
 }
 
-.projectActions {
-  display: flex;
-  gap: var(--space-md);
-  flex-wrap: wrap;
-}
-
-.projectActions .btn {
-  flex: 1;
-  min-width: 120px;
-  text-align: center;
-  font-size: 0.9rem;
-  padding: var(--space-sm) var(--space-md);
-}
+/* Legacy button styles removed - use Button component instead */
 
 .viewAll {
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .projectActions {
-    flex-direction: column;
-  }
-  
-  .projectActions .btn {
-    flex: none;
-  }
 }
