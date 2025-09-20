@@ -82,20 +82,44 @@ html {
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 0 0 20px rgba(220, 20, 60, 0.5);
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 0 20px rgba(220, 20, 60, 0.6);
+  will-change: transform, opacity;
 }
 
 .custom-cursor.hover {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: radial-gradient(circle, #dc143c 0%, #a01020 100%);
-  box-shadow: 0 0 30px rgba(220, 20, 60, 0.8);
+  box-shadow: 0 0 30px rgba(220, 20, 60, 0.8), 0 0 60px rgba(220, 20, 60, 0.4);
   border-width: 3px;
+  transform: scale(1.2);
+}
+
+.custom-cursor.click {
+  transform: scale(0.75);
+  box-shadow: 0 0 15px rgba(220, 20, 60, 0.9);
 }
 
 .custom-cursor.magnetic {
   transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Cursor trail effect */
+.cursor-trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: rgba(220, 20, 60, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.cursor-trail.visible {
+  opacity: 1;
 }
 
 /* Section Title Hover Effects */
@@ -467,3 +491,43 @@ html {
 .project-card:nth-child(2) { transition-delay: 0.3s; }
 .project-card:nth-child(3) { transition-delay: 0.5s; }
 .project-card:nth-child(4) { transition-delay: 0.7s; }
+
+/* Standardized Spacing */
+.section-spacing {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.project-card-spacing {
+  gap: 20px;
+}
+
+.text-spacing p {
+  margin-bottom: 16px;
+}
+
+.button-spacing {
+  padding: 12px 24px;
+}
+
+/* Enhanced button styles with consistent spacing */
+.btn-crimson {
+  background-color: #dc143c;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-crimson:hover {
+  background-color: #a01020;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(220, 20, 60, 0.3);
+}
