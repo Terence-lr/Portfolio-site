@@ -1,0 +1,172 @@
+.container {
+  padding: var(--space-3xl) 0;
+  min-height: 100vh;
+}
+
+.hero {
+  margin-bottom: var(--space-3xl);
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.heroText {
+  max-width: 600px;
+}
+
+.title {
+  margin-bottom: var(--space-lg);
+  color: var(--text);
+}
+
+.summary {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--muted-light);
+  margin-bottom: var(--space-xl);
+}
+
+.meta {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.role,
+.year {
+  background-color: var(--surface);
+  color: var(--brand);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+
+.cta {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.previewImage {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+.details {
+  margin-bottom: var(--space-3xl);
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+}
+
+.techSection,
+.highlightsSection {
+  background-color: var(--surface);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+}
+
+.sectionTitle {
+  margin-bottom: var(--space-xl);
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.techTag {
+  background-color: var(--bg);
+  color: var(--brand);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  border: 1px solid var(--border);
+  transition: all var(--transition-normal);
+}
+
+.techTag:hover {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
+.highlightsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlight {
+  color: var(--muted-light);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+  position: relative;
+  padding-left: var(--space-lg);
+}
+
+.highlight::before {
+  content: '•';
+  color: var(--brand);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.navigation {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  
+  .heroText {
+    order: 2;
+  }
+  
+  .heroImage {
+    order: 1;
+  }
+  
+  .detailsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  
+  .techSection,
+  .highlightsSection {
+    padding: var(--space-xl);
+  }
+  
+  .cta {
+    justify-content: center;
+  }
+  
+  .meta {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+}

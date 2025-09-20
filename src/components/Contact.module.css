@@ -1,0 +1,138 @@
+.section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--surface);
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.title {
+  margin-bottom: var(--space-lg);
+}
+
+.subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--muted-light);
+  font-size: 1.125rem;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.contactInfo {
+  background-color: var(--bg);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+}
+
+.contactTitle {
+  margin-bottom: var(--space-lg);
+  color: var(--text);
+}
+
+.contactDescription {
+  margin-bottom: var(--space-xl);
+  color: var(--muted-light);
+  line-height: 1.6;
+}
+
+.contactMethods {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.contactMethod {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-lg);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.contactMethod:hover {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
+.contactLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--brand);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contactValue {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.cta {
+  background-color: var(--bg);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.ctaTitle {
+  margin-bottom: var(--space-lg);
+  color: var(--text);
+}
+
+.ctaDescription {
+  margin-bottom: var(--space-xl);
+  color: var(--muted-light);
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButtons .btn {
+  min-width: 140px;
+}
+
+@media (max-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  
+  .contactInfo,
+  .cta {
+    padding: var(--space-xl);
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctaButtons .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}

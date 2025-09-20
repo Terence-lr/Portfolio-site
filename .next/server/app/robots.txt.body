@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/sitemap.xml

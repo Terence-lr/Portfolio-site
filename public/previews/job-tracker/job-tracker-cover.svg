@@ -1,0 +1,7 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1440" height="900" fill="#0A0A0A"/>
+    <rect x="120" y="120" width="1200" height="660" rx="20" fill="#00BFFF" opacity="0.1"/>
+    <rect x="120" y="120" width="1200" height="660" rx="20" stroke="#00BFFF" stroke-width="2"/>
+    <text x="720" y="450" text-anchor="middle" fill="#00BFFF" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Job Tracker</text>
+    <text x="720" y="500" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="24">Preview Image</text>
+  </svg>
