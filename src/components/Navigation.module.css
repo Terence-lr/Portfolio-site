@@ -45,6 +45,7 @@
   border: 2px solid var(--border);
   transition: border-color var(--transition-fast);
   flex-shrink: 0; /* Prevent shrinking */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo:hover .logoImage {
@@ -171,5 +172,24 @@
   
   .mobileNav {
     display: flex;
+  }
+}
+
+/* Responsive header avatar sizing */
+@media (max-width: 480px) {
+  .logoImage {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .logo {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .logoImage {
+    width: 36px;
+    height: 36px;
   }
 }

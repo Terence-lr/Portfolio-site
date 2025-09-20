@@ -38,11 +38,11 @@
 
 .portrait {
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   height: auto;
   aspect-ratio: 1 / 1; /* Ensure perfect circle */
   border-radius: 50%;
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
   transition: transform var(--transition-normal);
   object-fit: cover; /* Ensure proper cropping */
   object-position: center; /* Center the face */
@@ -64,7 +64,7 @@
 }
 
 /* Mobile-first responsive design */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .portrait {
     max-width: 280px;
   }
@@ -76,15 +76,15 @@
     gap: var(--space-2xl);
     text-align: center;
   }
-  
+
   .aboutText {
     order: 2;
   }
-  
+
   .aboutImage {
     order: 1;
   }
-  
+
   .portrait {
     max-width: 320px;
   }
@@ -92,6 +92,6 @@
 
 @media (min-width: 1024px) {
   .portrait {
-    max-width: 400px;
+    max-width: 420px;
   }
 }

@@ -27,17 +27,19 @@ export default function About() {
                   When I'm not coding, I'm investing in personal growth, fitness, and exploring ways technology can empower communities. My mission is to use tech not just for innovation, but for impact.
                 </p>
               </div>
-              <div ref={imageRef} className={`${styles.aboutImage} scroll-reveal`}>
-                <Image
-                  src="/images/Terence2.jpg"
-                  alt="Terence Richardson, a Navy-trained, NYC-based software builder focused on creating AI-native tools."
-                  width={400}
-                  height={400}
-                  className={styles.portrait}
-                  priority
-                  sizes="(max-width: 768px) 280px, (max-width: 1024px) 320px, 400px"
-                />
-              </div>
+                      <div ref={imageRef} className={`${styles.aboutImage} scroll-reveal`}>
+                        <Image
+                          src="/images/circle.jpg"
+                          alt="Terence Richardson, a Navy-trained, NYC-based software builder focused on creating AI-native tools."
+                          width={420}
+                          height={420}
+                          className={styles.portrait}
+                          priority
+                          sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 420px"
+                          placeholder="blur"
+                          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                        />
+                      </div>
             </div>
           </div>
         </div>

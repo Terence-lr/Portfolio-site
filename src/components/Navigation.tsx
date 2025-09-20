@@ -73,17 +73,17 @@ export default function Navigation() {
         <div className={styles.navContent}>
           {/* Logo */}
           <Link href="/" className={styles.logo}>
-            <div className={styles.logoImage}>
-              <Image
-                src="/images/Terence2.jpg"
-                alt="Terence Richardson headshot"
-                width={32}
-                height={32}
-                className={styles.profileImage}
-                priority
-                sizes="32px"
-              />
-            </div>
+                    <div className={styles.logoImage}>
+                      <Image
+                        src="/images/circle.jpg"
+                        alt="Terence Richardson headshot"
+                        width={32}
+                        height={32}
+                        className={styles.profileImage}
+                        priority
+                        sizes="32px"
+                      />
+                    </div>
             <span className={styles.logoText}>Terence Richardson</span>
           </Link>
 
