@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import MagneticButton from './MagneticButton';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -21,14 +22,22 @@ export default function Hero() {
             <p className={styles.subtitle}>
               I design and ship lean, user-obsessed tools — from productivity systems to job-hunt dashboards — using modern web tech and an eye for real-world impact.
             </p>
-            <div className={`${styles.cta} scroll-reveal-stagger`}>
-              <Link href="/projects" className="btn btn-primary interactive">
-                View Projects
-              </Link>
-              <Link href="/contact" className="btn btn-secondary interactive">
-                Contact
-              </Link>
-            </div>
+                    <div className={`${styles.cta} scroll-reveal-stagger`}>
+                      <MagneticButton
+                        href="/projects"
+                        variant="primary"
+                        className="magnetic"
+                      >
+                        View Projects
+                      </MagneticButton>
+                      <MagneticButton
+                        href="/contact"
+                        variant="secondary"
+                        className="magnetic"
+                      >
+                        Contact
+                      </MagneticButton>
+                    </div>
           </div>
           <div ref={imageRef} className={`${styles.heroImage} scroll-reveal`}>
             <Image

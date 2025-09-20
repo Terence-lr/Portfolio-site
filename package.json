@@ -13,6 +13,7 @@
     "previews": "npm run previews:capture && npm run previews:optimize"
   },
   "dependencies": {
+    "framer-motion": "^12.23.16",
     "next": "^14.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

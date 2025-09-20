@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import MagneticButton from './MagneticButton';
 import styles from './Contact.module.css';
 
 export default function Contact() {
@@ -163,14 +164,15 @@ export default function Contact() {
                   </div>
                 )}
                 
-                <button 
-                  type="submit" 
-                  className={`btn btn-primary interactive ${styles.submitButton}`}
+                <MagneticButton
+                  type="submit"
+                  variant="primary"
+                  className={`magnetic ${styles.submitButton}`}
                   disabled={formState === 'submitting'}
                   aria-describedby="submit-status"
                 >
                   {formState === 'submitting' ? 'Sending...' : 'Send Message'}
-                </button>
+                </MagneticButton>
                 <div id="submit-status" className="sr-only" aria-live="polite">
                   {formState === 'submitting' && 'Submitting your message...'}
                   {formState === 'success' && 'Message sent successfully!'}

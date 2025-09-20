@@ -55,7 +55,7 @@ export const projects: Project[] = [
     title: 'Job Tracker',
     summary: 'Multi-user job-hunt dashboard to organize applications and track progress.',
     microTagline: 'Clarity for the grind.',
-    tech: ['React', 'Firebase', 'Vercel'],
+    tech: ['React', 'Supabase', 'Vercel'],
     repoUrl: 'https://github.com/Terence-lr/total-job-tracker-',
     demoUrl: 'https://total-job-tracker.vercel.app',
     preview: {

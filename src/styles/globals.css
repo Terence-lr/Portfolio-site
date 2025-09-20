@@ -10,6 +10,8 @@
   --brand: #DC143C;
   --brand-light: #FF2D55;
   --brand-dark: #B01030;
+  --accent-200: #FF6B7A;
+  --accent-800: #8B0000;
   --border: #333333;
   --border-light: #444444;
   
@@ -398,7 +400,8 @@ a:hover {
 }
 
 /* Hide default cursor on interactive elements */
-.interactive {
+.interactive,
+.magnetic {
   cursor: none;
 }
 
