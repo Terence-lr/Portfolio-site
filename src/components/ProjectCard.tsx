@@ -105,6 +105,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="btn btn-primary interactive" 
             target="_blank" 
             rel="noopener noreferrer"
+            aria-label={`View live demo of ${project.title}`}
           >
             {project.cta.demo}
           </a>
@@ -113,6 +114,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="btn btn-secondary interactive" 
             target="_blank" 
             rel="noopener noreferrer"
+            aria-label={`View source code for ${project.title} on GitHub`}
           >
             {project.cta.repo}
           </a>

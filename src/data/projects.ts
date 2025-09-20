@@ -53,7 +53,7 @@ export const projects: Project[] = [
   {
     slug: 'job-tracker',
     title: 'Job Tracker',
-    summary: 'Multi-user job-hunt dashboard to organize applications and track progress.',
+    summary: 'Multi-user job-hunt dashboard to organize applications and track progress. This comprehensive application provides real-time collaboration features, advanced filtering capabilities, and detailed analytics to help job seekers stay organized and motivated throughout their job search journey.',
     microTagline: 'Clarity for the grind.',
     tech: ['React', 'Firebase', 'Vercel'],
     repoUrl: 'https://github.com/Terence-lr/total-job-tracker-',

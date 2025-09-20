@@ -1,7 +1,8 @@
 .projectCard {
   overflow: hidden;
-  padding: 0;
+  padding: 0 !important; /* Override global .card padding */
   height: 100%;
+  min-height: 600px; /* Ensure minimum height for consistent layout */
   display: flex;
   flex-direction: column;
 }
@@ -61,6 +62,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 0; /* Allow flex item to shrink */
 }
 
 .projectHeader {
@@ -99,6 +101,8 @@
   color: var(--muted-light);
   line-height: 1.6;
   flex: 1;
+  min-height: 0; /* Allow text to be scrollable if needed */
+  overflow-wrap: break-word; /* Prevent text overflow */
 }
 
 .techStack {
@@ -155,6 +159,8 @@
   display: flex;
   gap: var(--space-md);
   margin-top: auto;
+  padding-top: var(--space-lg);
+  flex-shrink: 0; /* Prevent actions from shrinking */
 }
 
 .projectActions .btn {
@@ -162,20 +168,66 @@
   text-align: center;
   font-size: 0.9rem;
   padding: var(--space-sm) var(--space-md);
+  min-height: 44px; /* Ensure minimum touch target */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* Prevent button text wrapping */
+}
+
+/* Enhanced focus states for accessibility */
+.projectActions .btn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(220, 20, 60, 0.2);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 480px) {
+  .projectCard {
+    min-height: 500px; /* Reduce min-height on very small screens */
+  }
+  
+  .projectImage {
+    height: 200px; /* Smaller image on mobile */
+  }
+  
+  .projectContent {
+    padding: var(--space-lg);
+  }
+  
+  .projectActions {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  
+  .projectActions .btn {
+    flex: none;
+    width: 100%;
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 768px) {
   .projectActions {
     flex-direction: column;
+    gap: var(--space-sm);
   }
   
   .projectActions .btn {
     flex: none;
+    width: 100%;
   }
   
   .projectHeader {
     flex-direction: column;
     gap: var(--space-sm);
     align-items: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectCard {
+    min-height: 650px; /* Slightly taller on larger screens */
   }
 }
