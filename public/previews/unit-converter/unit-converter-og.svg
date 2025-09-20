@@ -1,7 +1,7 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="1200" height="630" fill="#0A0A0A"/>
-    <rect x="100" y="100" width="1000" height="430" rx="20" fill="#32CD32" opacity="0.1"/>
-    <rect x="100" y="100" width="1000" height="430" rx="20" stroke="#32CD32" stroke-width="3"/>
-    <text x="600" y="300" text-anchor="middle" fill="#32CD32" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Unit Converter</text>
-    <text x="600" y="350" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="24">Terence Richardson</text>
+    <rect x="40" y="40" width="1120" height="550" rx="20" fill="#DC143C" opacity="0.1"/>
+    <rect x="40" y="40" width="1120" height="550" rx="20" stroke="#DC143C" stroke-width="3"/>
+    <text x="50%" y="45%" text-anchor="middle" fill="#DC143C" font-family="Arial, sans-serif" font-size="52.5" font-weight="bold">Unit Converter</text>
+    <text x="50%" y="55%" text-anchor="middle" fill="#DC143C" font-family="Arial, sans-serif" font-size="31.5" opacity="0.7">Preview</text>
   </svg>

@@ -32,12 +32,12 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Terence-lr/Portfolio-site',
     demoUrl: 'https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/',
     preview: {
-      cover: '/previews/portfolio/portfolio-cover.jpg',
+      cover: '/previews/portfolio/portfolio-cover.svg',
       video: '/previews/portfolio/portfolio-loop.webm',
       gif: '/previews/portfolio/portfolio-loop.gif',
-      thumb: '/previews/portfolio/portfolio-thumb.jpg'
+      thumb: '/previews/portfolio/portfolio-thumb.svg'
     },
-    ogImage: '/previews/portfolio/portfolio-og.png',
+    ogImage: '/previews/portfolio/portfolio-og.svg',
     highlights: [
       'Built with Next.js 14, TypeScript, and pure CSS',
       'Responsive across devices',
@@ -59,12 +59,12 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Terence-lr/total-job-tracker',
     demoUrl: 'https://total-job-tracker.vercel.app',
     preview: {
-      cover: '/previews/job-tracker/job-tracker-cover.jpg',
+      cover: '/previews/job-tracker/job-tracker-cover.svg',
       video: '/previews/job-tracker/job-tracker-loop.webm',
       gif: '/previews/job-tracker/job-tracker-loop.gif',
-      thumb: '/previews/job-tracker/job-tracker-thumb.jpg'
+      thumb: '/previews/job-tracker/job-tracker-thumb.svg'
     },
-    ogImage: '/previews/job-tracker/job-tracker-og.png',
+    ogImage: '/previews/job-tracker/job-tracker-og.svg',
     highlights: [
       'React + Firebase + Vercel hosting',
       'Auth + secure storage',
@@ -86,12 +86,12 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Terence-lr/distance-converter',
     demoUrl: 'https://tlr-distance-converter.replit.app/',
     preview: {
-      cover: '/previews/unit-converter/unit-converter-cover.jpg',
+      cover: '/previews/unit-converter/unit-converter-cover.svg',
       video: '/previews/unit-converter/unit-converter-loop.webm',
       gif: '/previews/unit-converter/unit-converter-loop.gif',
-      thumb: '/previews/unit-converter/unit-converter-thumb.jpg'
+      thumb: '/previews/unit-converter/unit-converter-thumb.svg'
     },
-    ogImage: '/previews/unit-converter/unit-converter-og.png',
+    ogImage: '/previews/unit-converter/unit-converter-og.svg',
     highlights: [
       'Responsive PWA for mobile/desktop',
       'Common conversions (length, weight, temperature, etc.)',

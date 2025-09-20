@@ -41,7 +41,7 @@ export default function Navigation() {
                 href={item.href}
                 className={`${styles.navLink} ${
                   pathname === item.href ? styles.active : ''
-                }`}
+                } interactive`}
               >
                 {item.label}
               </Link>

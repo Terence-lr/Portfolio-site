@@ -1,6 +1,10 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useRef } from 'react';
 import { Project } from '@/data/projects';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import styles from './ProjectCard.module.css';
 
 interface ProjectCardProps {
@@ -8,18 +12,60 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const cardRef = useScrollReveal<HTMLElement>({ threshold: 0.2 });
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (videoRef.current && project.preview.video) {
+      videoRef.current.play().catch(console.error);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
   return (
-    <article className={`card ${styles.projectCard}`}>
+    <article 
+      ref={cardRef}
+      className={`card ${styles.projectCard} scroll-reveal interactive`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className={styles.projectImage}>
-        <Image
-          src={project.preview.cover}
-          alt={`${project.title} preview`}
-          width={500}
-          height={300}
-          className={styles.coverImage}
-        />
+        {isHovered && project.preview.video ? (
+          <video
+            ref={videoRef}
+            src={project.preview.video}
+            poster={project.preview.cover}
+            className={styles.coverImage}
+            muted
+            loop
+            playsInline
+            onError={() => {
+              // Fallback to GIF if video fails
+              if (videoRef.current && project.preview.gif) {
+                videoRef.current.src = project.preview.gif;
+              }
+            }}
+          />
+        ) : (
+          <Image
+            src={project.preview.cover}
+            alt={`${project.title} preview`}
+            width={500}
+            height={300}
+            className={styles.coverImage}
+          />
+        )}
         <div className={styles.projectOverlay}>
-          <Link href={`/projects/${project.slug}`} className={styles.viewProject}>
+          <Link href={`/projects/${project.slug}`} className={`${styles.viewProject} interactive`}>
             View Details
           </Link>
         </div>
@@ -56,7 +102,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className={styles.projectActions}>
           <a 
             href={project.demoUrl} 
-            className="btn btn-primary" 
+            className="btn btn-primary interactive" 
             target="_blank" 
             rel="noopener noreferrer"
           >
@@ -64,7 +110,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </a>
           <a 
             href={project.repoUrl} 
-            className="btn btn-secondary" 
+            className="btn btn-secondary interactive" 
             target="_blank" 
             rel="noopener noreferrer"
           >

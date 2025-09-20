@@ -35,13 +35,13 @@ export default function Footer() {
                   href="https://github.com/Terence-lr" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className={styles.link}
+                  className={`${styles.link} interactive`}
                 >
                   GitHub
                 </a>
                 <a 
                   href="mailto:terence.richardson@example.com" 
-                  className={styles.link}
+                  className={`${styles.link} interactive`}
                 >
                   Email
                 </a>

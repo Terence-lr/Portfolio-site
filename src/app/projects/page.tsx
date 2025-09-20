@@ -1,44 +1,36 @@
 import { Metadata } from 'next';
-import Navigation from '@/components/Navigation';
-import ProjectCard from '@/components/ProjectCard';
-import Footer from '@/components/Footer';
-import { projects } from '@/data/projects';
-import styles from './page.module.css';
+import ProjectsPageClient from './ProjectsPageClient';
 
 export const metadata: Metadata = {
   title: 'Projects - Terence Richardson',
   description: 'Explore my portfolio of web development projects, including modern applications built with React, TypeScript, and other cutting-edge technologies.',
+  keywords: ['projects', 'portfolio', 'web development', 'react', 'typescript', 'nextjs'],
+  authors: [{ name: 'Terence Richardson' }],
+  creator: 'Terence Richardson',
   openGraph: {
     title: 'Projects - Terence Richardson',
     description: 'Explore my portfolio of web development projects, including modern applications built with React, TypeScript, and other cutting-edge technologies.',
-    images: ['/previews/portfolio/portfolio-og.png'],
+    type: 'website',
+    images: [
+      {
+        url: '/previews/portfolio/portfolio-og.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Terence Richardson Projects',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Projects - Terence Richardson',
+    description: 'Explore my portfolio of web development projects, including modern applications built with React, TypeScript, and other cutting-edge technologies.',
+    images: ['/previews/portfolio/portfolio-og.svg'],
+  },
+  alternates: {
+    canonical: 'https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/projects',
   },
 };
 
 export default function ProjectsPage() {
-  return (
-    <>
-      <Navigation />
-      <main className={styles.main}>
-        <div className="container">
-          <div className={styles.header}>
-            <h1 className={styles.title}>
-              My <span className="text-brand">Projects</span>
-            </h1>
-            <p className={styles.subtitle}>
-              A collection of web applications and projects I've built, 
-              showcasing my skills in modern web development.
-            </p>
-          </div>
-          
-          <div className={styles.projectsGrid}>
-            {projects.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
-            ))}
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+  return <ProjectsPageClient />;
 }

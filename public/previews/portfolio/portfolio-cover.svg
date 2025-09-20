@@ -1,7 +1,7 @@
 <svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="1440" height="900" fill="#0A0A0A"/>
-    <rect x="120" y="120" width="1200" height="660" rx="20" fill="#DC143C" opacity="0.1"/>
-    <rect x="120" y="120" width="1200" height="660" rx="20" stroke="#DC143C" stroke-width="2"/>
-    <text x="720" y="450" text-anchor="middle" fill="#DC143C" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Portfolio</text>
-    <text x="720" y="500" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="24">Preview Image</text>
+    <rect x="40" y="40" width="1360" height="820" rx="20" fill="#DC143C" opacity="0.1"/>
+    <rect x="40" y="40" width="1360" height="820" rx="20" stroke="#DC143C" stroke-width="3"/>
+    <text x="50%" y="45%" text-anchor="middle" fill="#DC143C" font-family="Arial, sans-serif" font-size="75" font-weight="bold">Portfolio</text>
+    <text x="50%" y="55%" text-anchor="middle" fill="#DC143C" font-family="Arial, sans-serif" font-size="45" opacity="0.7">Preview</text>
   </svg>

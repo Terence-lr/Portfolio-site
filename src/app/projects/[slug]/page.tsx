@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Navigation from '@/components/Navigation';
 import ProjectDetail from '@/components/ProjectDetail';
-import Footer from '@/components/Footer';
 import { getProjectBySlug, getAllProjectSlugs } from '@/data/projects';
 
 interface ProjectPageProps {
@@ -30,10 +28,30 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   return {
     title: `${project.title} - Terence Richardson`,
     description: project.summary,
+    keywords: [...project.tech, 'portfolio', 'project', 'development'],
+    authors: [{ name: 'Terence Richardson' }],
+    creator: 'Terence Richardson',
     openGraph: {
       title: `${project.title} - Terence Richardson`,
       description: project.summary,
+      type: 'article',
+      images: [
+        {
+          url: project.ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${project.title} project preview`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} - Terence Richardson`,
+      description: project.summary,
       images: [project.ogImage],
+    },
+    alternates: {
+      canonical: `https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/projects/${params.slug}`,
     },
   };
 }
@@ -45,13 +63,5 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  return (
-    <>
-      <Navigation />
-      <main>
-        <ProjectDetail project={project} />
-      </main>
-      <Footer />
-    </>
-  );
+  return <ProjectDetail project={project} />;
 }

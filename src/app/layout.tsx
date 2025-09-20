@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../styles/globals.css';
+import CustomCursor from '../components/CustomCursor';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -61,11 +64,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/images/icon.png" type="image/png" />
         <link rel="canonical" href="https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/" />
       </head>
       <body className={inter.className}>
-        {children}
+        <a href="#main-content" className="skip-to-content">
+          Skip to main content
+        </a>
+        <CustomCursor />
+        <Navigation />
+        <main id="main-content">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
