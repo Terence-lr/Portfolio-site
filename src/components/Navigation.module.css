@@ -128,6 +128,13 @@
   gap: var(--space-md);
   padding: var(--space-lg) 0;
   border-top: 1px solid var(--border);
+  background-color: var(--bg);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  box-shadow: var(--shadow-lg);
 }
 
 .mobileNavLink {
@@ -143,7 +150,17 @@
   color: var(--brand);
 }
 
+.mobileNavLink:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
 @media (max-width: 768px) {
+  .nav {
+    position: relative; /* Allow mobile menu to position correctly */
+  }
+  
   .desktopNav {
     display: none;
   }

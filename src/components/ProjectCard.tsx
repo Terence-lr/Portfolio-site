@@ -82,7 +82,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         
         <div className={styles.techStack}>
           {project.tech.map((tech) => (
-            <span key={tech} className={styles.techTag}>
+            <span 
+              key={tech} 
+              className={styles.techTag}
+              title={`Built with ${tech}`}
+              aria-label={`Technology: ${tech}`}
+            >
               {tech}
             </span>
           ))}

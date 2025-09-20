@@ -5,8 +5,8 @@
   --surface: #111111;
   --surface-elevated: #1A1A1A;
   --text: #FFFFFF;
-  --muted: #888888;
-  --muted-light: #CCCCCC;
+  --muted: #999999; /* Improved contrast for WCAG AA */
+  --muted-light: #E5E5E5; /* Better contrast on dark background */
   --brand: #DC143C;
   --brand-light: #FF2D55;
   --brand-dark: #B01030;
@@ -95,6 +95,7 @@ p {
   font-size: 1.125rem;
   line-height: 1.7;
   color: var(--muted-light);
+  max-width: 75ch; /* Optimal line length for readability */
 }
 
 /* Links */
