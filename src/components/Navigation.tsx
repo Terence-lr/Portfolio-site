@@ -84,7 +84,9 @@ export default function Navigation() {
                         sizes="32px"
                       />
                     </div>
-            <span className={styles.logoText}>Terence Richardson</span>
+            <span className={styles.logoText}>
+              Terence <span className={styles.lastName}>Richardson</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
