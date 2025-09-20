@@ -1,170 +1,174 @@
 
-import { Brain, Code, Wrench, TrendingUp } from "lucide-react";
+import { Code, ExternalLink, Github, Zap } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export default function Skills() {
-  const aiSkills = [
-    { name: "Prompt Engineering", level: 85, icon: "fas fa-brain", color: "text-purple-500" },
-    { name: "AI-First Development", level: 80, icon: "fas fa-robot", color: "text-blue-600" },
-    { name: "Large Language Models", level: 75, icon: "fas fa-comments", color: "text-green-500" },
-    { name: "AI Integration", level: 70, icon: "fas fa-plug", color: "text-orange-500" },
+  const [sectionRef, isSectionVisible] = useScrollAnimation();
+  
+  const projectSkills = [
+    {
+      project: "Total Job Tracker",
+      description: "Full-stack job application management system",
+      technologies: ["React", "TypeScript", "Supabase", "Vercel"],
+      demoUrl: "https://total-job-tracker.vercel.app",
+      codeUrl: "https://github.com/Terence-lr/total-job-tracker",
+      highlights: [
+        "Built responsive React components with TypeScript",
+        "Integrated Supabase for real-time database operations",
+        "Deployed to Vercel with CI/CD pipeline",
+        "Implemented user authentication and data persistence"
+      ]
+    },
+    {
+      project: "Distance Converter",
+      description: "Interactive unit conversion tool",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      demoUrl: "https://tlr-distance-converter.replit.app/",
+      codeUrl: "https://github.com/Terence-lr/distance-converter",
+      highlights: [
+        "Vanilla JavaScript for dynamic calculations",
+        "Responsive CSS design with mobile-first approach",
+        "Real-time conversion with input validation",
+        "Clean, intuitive user interface"
+      ]
+    }
   ];
 
-  const webDevSkills = [
-    { name: "HTML5", level: 90, icon: "fab fa-html5", color: "text-orange-500" },
-    { name: "CSS3", level: 85, icon: "fab fa-css3-alt", color: "text-blue-500" },
-    { name: "JavaScript", level: 80, icon: "fab fa-js-square", color: "text-yellow-500" },
-    { name: "React", level: 70, icon: "fab fa-react", color: "text-cyan-500" },
-    { name: "Python", level: 65, icon: "fab fa-python", color: "text-green-600" },
-    { name: "API Development", level: 60, icon: "fas fa-server", color: "text-purple-600" },
+  const coreTechnologies = [
+    { name: "React", category: "Frontend", projects: ["Total Job Tracker"] },
+    { name: "TypeScript", category: "Language", projects: ["Total Job Tracker"] },
+    { name: "JavaScript", category: "Language", projects: ["Distance Converter"] },
+    { name: "HTML", category: "Markup", projects: ["Distance Converter"] },
+    { name: "CSS", category: "Styling", projects: ["Distance Converter", "Portfolio"] },
+    { name: "Supabase", category: "Backend", projects: ["Total Job Tracker"] },
+    { name: "Vercel", category: "Deployment", projects: ["Total Job Tracker"] },
+    { name: "Git", category: "Version Control", projects: ["All Projects"] }
   ];
 
-  const toolsSkills = [
-    { name: "Git & GitHub", level: 85, icon: "fab fa-git-alt", color: "text-orange-600" },
-    { name: "VS Code", level: 90, icon: "fas fa-code", color: "text-blue-600" },
-    { name: "Database Design", level: 65, icon: "fas fa-database", color: "text-green-500" },
-    { name: "Node.js", level: 55, icon: "fab fa-node-js", color: "text-green-600" },
-  ];
-
-  const additionalSkills = [
-    "Responsive Design",
-    "Figma",
-    "Tailwind CSS",
-    "Bootstrap",
-    "RESTful APIs",
-    "Problem Solving",
-    "Agile Methodologies",
-    "Technical Documentation"
-  ];
-
-  const SkillBar = ({ name, level, icon, color }: { 
-    name: string; 
-    level: number; 
-    icon: string; 
-    color: string; 
-  }) => (
-    <div className="skill-badge bg-muted rounded-lg p-4 flex items-center justify-between hover:shadow-lg transition-all duration-300" data-testid={`skill-${name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}>
-      <div className="flex items-center">
-        <i className={`${icon} ${color} text-2xl mr-4`}></i>
-        <span className="font-medium">{name}</span>
-      </div>
-      <div className="flex items-center gap-3">
-        <div className="w-24 bg-secondary rounded-full h-3 relative">
-          <div 
-            className="h-3 rounded-full bg-gradient-to-r from-accent to-primary transition-all duration-500"
-            style={{ width: `${level}%` }}
-          ></div>
+  const ProjectSkillCard = ({ project }: { project: any }) => (
+    <div className="bg-deep-black border border-silver-20 rounded-xl p-6 hover:border-crimson-30 transition-all duration-300 magnetic" data-testid={`project-skill-${project.project.toLowerCase().replace(/\s+/g, '-')}`}>
+      <div className="flex items-start justify-between mb-4">
+        <div>
+          <h3 className="text-xl font-semibold text-white mb-2">{project.project}</h3>
+          <p className="text-light-gray text-sm mb-4">{project.description}</p>
         </div>
-        <span className="text-xs text-muted-foreground font-medium w-8 text-right flex-shrink-0">{level}%</span>
+        <div className="flex gap-2">
+          <a 
+            href={project.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-crimson text-white px-3 py-1 rounded text-sm font-medium flex items-center gap-1 magnetic"
+            data-testid={`demo-${project.project.toLowerCase().replace(/\s+/g, '-')}`}
+          >
+            <ExternalLink className="h-3 w-3" />
+            Demo
+          </a>
+          <a 
+            href={project.codeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-crimson text-crimson px-3 py-1 rounded text-sm font-medium hover:bg-crimson hover:text-white transition-all flex items-center gap-1 magnetic"
+            data-testid={`code-${project.project.toLowerCase().replace(/\s+/g, '-')}`}
+          >
+            <Github className="h-3 w-3" />
+            Code
+          </a>
+        </div>
+      </div>
+      
+      <div className="mb-4">
+        <h4 className="text-sm font-medium text-white mb-2">Technologies Used:</h4>
+        <div className="flex flex-wrap gap-2">
+          {project.technologies.map((tech: string) => (
+            <span 
+              key={tech}
+              className="bg-crimson-20 text-crimson px-3 py-1 rounded-full text-xs border border-crimson-30"
+              data-testid={`tech-${tech.toLowerCase()}-${project.project.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+      
+      <div>
+        <h4 className="text-sm font-medium text-white mb-2">Key Achievements:</h4>
+        <ul className="space-y-1">
+          {project.highlights.map((highlight: string, index: number) => (
+            <li 
+              key={index}
+              className="text-light-gray text-xs flex items-start gap-2"
+              data-testid={`highlight-${index}-${project.project.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+              <span className="text-crimson mt-1">•</span>
+              <span>{highlight}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
 
-  const SkillCategory = ({ 
-    title, 
-    icon: Icon, 
-    skills, 
-    description,
-    testId 
-  }: { 
-    title: string; 
-    icon: React.ComponentType<any>; 
-    skills: any[]; 
-    description: string;
-    testId: string;
-  }) => (
-    <div className="bg-card rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300" data-testid={testId}>
-      <h3 className="text-xl font-semibold text-primary mb-3 flex items-center">
-        <Icon className="text-accent mr-3 h-6 w-6" />
-        {title}
-      </h3>
-      <p className="text-muted-foreground text-sm mb-6">{description}</p>
-      <div className="space-y-4">
-        {skills.map((skill) => (
-          <SkillBar
-            key={skill.name}
-            name={skill.name}
-            level={skill.level}
-            icon={skill.icon}
-            color={skill.color}
-          />
-        ))}
+  const TechnologyBadge = ({ tech }: { tech: any }) => (
+    <div className="bg-charcoal border border-silver-20 rounded-lg p-4 hover:border-crimson-30 transition-all duration-300" data-testid={`tech-badge-${tech.name.toLowerCase()}`}>
+      <div className="flex items-center justify-between mb-2">
+        <h4 className="font-semibold text-white">{tech.name}</h4>
+        <span className="text-xs text-crimson bg-crimson-20 px-2 py-1 rounded">{tech.category}</span>
+      </div>
+      <div className="text-xs text-light-gray">
+        <span className="text-white">Used in: </span>
+        {tech.projects.join(", ")}
       </div>
     </div>
   );
 
   return (
-    <section id="skills" className="py-20 bg-muted">
+    <section ref={sectionRef} id="skills" className={`py-20 bg-background scroll-animate ${isSectionVisible ? 'visible' : ''}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-skills-title">
-            Skills & Technologies
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 section-title" data-testid="text-skills-title">
+            Skills Through Projects
           </h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
-          <p className="text-muted-foreground max-w-3xl mx-auto text-lg" data-testid="text-skills-description">
-            Combining traditional development skills with cutting-edge AI capabilities. 
-            My journey through Pursuit's AI Native bootcamp has equipped me with both foundational programming knowledge 
-            and forward-thinking AI integration expertise.
+          <div className="w-20 h-1 bg-crimson mx-auto mb-6"></div>
+          <p className="text-light-gray max-w-3xl mx-auto text-lg" data-testid="text-skills-description">
+            Rather than abstract percentages, I demonstrate my skills through actual projects I've built and shipped. 
+            Each project showcases real competency with specific technologies and problem-solving approaches.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          <SkillCategory
-            title="AI & Emerging Tech"
-            icon={Brain}
-            skills={aiSkills}
-            description="Leading-edge AI capabilities and prompt engineering expertise"
-            testId="section-ai-skills"
-          />
-          
-          <SkillCategory
-            title="Web Development"
-            icon={Code}
-            skills={webDevSkills}
-            description="Full-stack development with modern frameworks and languages"
-            testId="section-web-dev-skills"
-          />
-          
-          <SkillCategory
-            title="Tools & Platforms"
-            icon={Wrench}
-            skills={toolsSkills}
-            description="Development tools, version control, and database management"
-            testId="section-tools-skills"
-          />
+        {/* Project-Based Skills */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {projectSkills.map((project) => (
+            <ProjectSkillCard key={project.project} project={project} />
+          ))}
         </div>
         
-        {/* Growth Mindset Section */}
-        <div className="bg-card rounded-xl p-8 shadow-md mb-8" data-testid="section-growth-mindset">
-          <h3 className="text-xl font-semibold text-primary mb-4 flex items-center">
-            <TrendingUp className="text-accent mr-3 h-5 w-5" />
-            Growth Mindset & Continuous Learning
+        {/* Technology Overview */}
+        <div className="bg-deep-black border border-silver-20 rounded-xl p-8 mb-8" data-testid="section-tech-overview">
+          <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
+            <Code className="text-crimson mr-3 h-6 w-6" />
+            Technology Stack Overview
           </h3>
-          <p className="text-muted-foreground mb-4">
-            As an AI-native developer, I believe in continuous adaptation and learning. The percentages above reflect my current proficiency, 
-            but I'm constantly expanding my capabilities through hands-on projects, AI-assisted learning, and staying current with emerging technologies.
+          <p className="text-light-gray mb-6">
+            Here's a comprehensive view of the technologies I've used in my projects, organized by category and showing real-world application.
           </p>
-          <div className="bg-muted rounded-lg p-4">
-            <p className="text-sm text-muted-foreground italic">
-              "In the rapidly evolving world of AI and development, the ability to learn, adapt, and integrate new tools 
-              is more valuable than static knowledge. I embrace this challenge daily."
-            </p>
-          </div>
-        </div>
-        
-        {/* Additional Skills */}
-        <div className="text-center" data-testid="section-additional-skills">
-          <h4 className="text-lg font-medium text-primary mb-6">Additional Competencies</h4>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {additionalSkills.map((skill) => (
-              <span 
-                key={skill}
-                className="bg-card px-4 py-3 rounded-lg text-muted-foreground border border-border hover:border-accent hover:text-accent transition-all duration-200"
-                data-testid={`additional-skill-${skill.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-              >
-                {skill}
-              </span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {coreTechnologies.map((tech) => (
+              <TechnologyBadge key={tech.name} tech={tech} />
             ))}
           </div>
+        </div>
+        
+        {/* Learning Philosophy */}
+        <div className="text-center bg-charcoal border border-silver-20 rounded-xl p-8" data-testid="section-learning-philosophy">
+          <h3 className="text-xl font-semibold text-white mb-4 flex items-center justify-center">
+            <Zap className="text-crimson mr-3 h-6 w-6" />
+            Project-Driven Learning
+          </h3>
+          <p className="text-light-gray max-w-2xl mx-auto leading-relaxed">
+            I believe in learning through building. Each project represents a new challenge that pushes me to master new technologies, 
+            solve complex problems, and ship production-ready code. This approach ensures my skills are practical, current, and battle-tested.
+          </p>
         </div>
       </div>
     </section>

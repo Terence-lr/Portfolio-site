@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { Menu, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -32,12 +32,19 @@ export default function Navigation() {
 
   const navItems = [
     { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "experience", label: "Experience" },
     { id: "contact", label: "Contact" },
   ];
+
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/resume.pdf';
+    link.download = 'Terence_Richardson_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 backdrop-blur-md border-b border-silver/20 z-50" style={{ backgroundColor: 'rgba(13, 13, 13, 0.95)' }}>
@@ -52,7 +59,7 @@ export default function Navigation() {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -67,6 +74,16 @@ export default function Navigation() {
                 {item.label}
               </button>
             ))}
+            
+            {/* Download Resume Button */}
+            <button
+              onClick={handleResumeDownload}
+              className="btn-crimson text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 magnetic"
+              data-testid="nav-download-resume"
+            >
+              <Download className="h-4 w-4" />
+              Resume
+            </button>
           </div>
 
           {/* Mobile Navigation */}
@@ -92,6 +109,16 @@ export default function Navigation() {
                     {item.label}
                   </button>
                 ))}
+                
+                {/* Mobile Resume Download */}
+                <button
+                  onClick={handleResumeDownload}
+                  className="btn-crimson text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 magnetic mt-4"
+                  data-testid="nav-mobile-download-resume"
+                >
+                  <Download className="h-4 w-4" />
+                  Download Resume
+                </button>
               </div>
             </SheetContent>
           </Sheet>
