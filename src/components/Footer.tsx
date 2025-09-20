@@ -40,6 +40,14 @@ export default function Footer() {
                   GitHub
                 </a>
                 <a 
+                  href="https://www.linkedin.com/in/terence-richardson-13b22a211" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`${styles.link} interactive`}
+                >
+                  LinkedIn
+                </a>
+                <a 
                   href="mailto:terence.richardson@example.com" 
                   className={`${styles.link} interactive`}
                 >

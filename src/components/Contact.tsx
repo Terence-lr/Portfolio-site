@@ -75,7 +75,7 @@ export default function Contact() {
                   GitHub
                 </a>
                 <a 
-                  href="https://linkedin.com/in/terence-richardson" 
+                  href="https://www.linkedin.com/in/terence-richardson-13b22a211" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={`${styles.socialLink} interactive`}

@@ -30,7 +30,7 @@ export default function About() {
               <div ref={imageRef} className={`${styles.aboutImage} scroll-reveal`}>
                 <Image
                   src="/images/Terence2.jpg"
-                  alt="Terence Richardson headshot."
+                  alt="Terence Richardson, a Navy-trained, NYC-based software builder focused on creating AI-native tools."
                   width={300}
                   height={300}
                   className={styles.portrait}

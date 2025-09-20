@@ -23,13 +23,15 @@ export default function Navigation() {
         <div className={styles.navContent}>
           {/* Logo */}
           <Link href="/" className={styles.logo}>
-            <Image
-              src="/images/icon.png"
-              alt="Terence Richardson"
-              width={32}
-              height={32}
-              className={styles.logoIcon}
-            />
+            <div className={styles.logoImage}>
+              <Image
+                src="/images/Terence2.jpg"
+                alt="Terence Richardson"
+                width={40}
+                height={40}
+                className={styles.profileImage}
+              />
+            </div>
             <span className={styles.logoText}>Terence Richardson</span>
           </Link>
 
