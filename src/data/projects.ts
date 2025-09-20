@@ -66,7 +66,7 @@ export const projects: Project[] = [
     },
     ogImage: '/previews/job-tracker/job-tracker-og.svg',
     highlights: [
-      'React + Firebase + Vercel hosting with 99.9% uptime',
+      'React + Supabase + Vercel hosting with 99.9% uptime',
       'Secure authentication with Row Level Security (RLS)',
       'Advanced filtering reduces application search time by 60%'
     ],
