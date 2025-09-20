@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import '../styles/globals.css';
 import CustomCursor from '../components/CustomCursor';
@@ -18,6 +18,19 @@ export const metadata: Metadata = {
   keywords: ['developer', 'portfolio', 'full-stack', 'react', 'typescript', 'nextjs'],
   authors: [{ name: 'Terence Richardson' }],
   creator: 'Terence Richardson',
+  icons: {
+    icon: [
+      { url: '/images/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/images/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/favicon.ico', sizes: 'any' },
+    ],
+    apple: '/images/apple-touch-icon.png',
+    other: [
+      { rel: 'android-chrome-192x192', url: '/images/android-chrome-192x192.png' },
+      { rel: 'android-chrome-512x512', url: '/images/android-chrome-512x512.png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -56,6 +69,14 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: '#000000',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -64,7 +85,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        <link rel="icon" href="/images/icon.png" type="image/png" />
         <link rel="canonical" href="https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/" />
       </head>
       <body className={inter.className}>
