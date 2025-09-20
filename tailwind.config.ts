@@ -44,6 +44,13 @@ export default {
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
+        // Custom crimson colors
+        crimson: "#dc143c",
+        "crimson-dark": "#a01020",
+        "light-gray": "#f8f8f8",
+        "charcoal": "#2a2a2a",
+        "deep-black": "#0d0d0d",
+        "silver": "#c0c0c0",
         chart: {
           "1": "var(--chart-1)",
           "2": "var(--chart-2)",

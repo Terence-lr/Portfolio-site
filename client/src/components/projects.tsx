@@ -1,112 +1,69 @@
 import { ExternalLink, Github } from "lucide-react";
-import { useQuery } from "@tanstack/react-query";
-import type { Project } from "@shared/schema";
 
 export default function Projects() {
-  const { data: projects, isLoading, error } = useQuery<Project[]>({
-    queryKey: ['/api/projects', 'featured'],
-    queryFn: async () => {
-      const res = await fetch('/api/projects?featured=true');
-      if (!res.ok) {
-        throw new Error(`Failed to fetch projects: ${res.statusText}`);
-      }
-      return res.json();
+  // Static project data as provided
+  const projects = [
+    {
+      id: 1,
+      title: "Total Job Tracker",
+      description: "A comprehensive job application tracking system built with React, TypeScript, and Supabase. Features include application status tracking, interview scheduling, and progress analytics.",
+      technologies: ["React", "TypeScript", "Supabase", "Vercel"],
+      demoUrl: "https://total-job-tracker.vercel.app",
+      codeUrl: "https://github.com/Terence-lr/total-job-tracker",
+      imageUrl: "/api/placeholder/400/300"
+    },
+    {
+      id: 2,
+      title: "Distance Converter",
+      description: "A clean and intuitive distance conversion tool built with vanilla HTML, CSS, and JavaScript. Supports multiple units and provides real-time conversion results.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      demoUrl: "https://tlr-distance-converter.replit.app/",
+      codeUrl: "https://github.com/Terence-lr/distance-converter",
+      imageUrl: "/api/placeholder/400/300"
     }
-  });
+  ];
 
-  if (isLoading) {
-    return (
-      <section id="projects" className="py-20 bg-background">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-projects-title">
-              Featured Projects
-            </h2>
-            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
-            <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-projects-description">
-              Here are some projects I've been working on. Each one taught me something new and helped me grow as a developer.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="project-card bg-card rounded-xl shadow-md overflow-hidden animate-pulse">
-                <div className="w-full h-48 bg-muted"></div>
-                <div className="p-6">
-                  <div className="h-6 bg-muted rounded mb-2"></div>
-                  <div className="h-4 bg-muted rounded mb-4"></div>
-                  <div className="flex gap-2 mb-4">
-                    <div className="h-6 w-16 bg-muted rounded"></div>
-                    <div className="h-6 w-20 bg-muted rounded"></div>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="h-6 w-20 bg-muted rounded"></div>
-                    <div className="h-6 w-16 bg-muted rounded"></div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  if (error) {
-    return (
-      <section id="projects" className="py-20 bg-background">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-projects-title">
-              Featured Projects
-            </h2>
-            <p className="text-muted-foreground" data-testid="text-projects-error">
-              Unable to load projects at the moment. Please try again later.
-            </p>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="py-20 bg-charcoal">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-projects-title">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 section-title" data-testid="text-projects-title">
             Featured Projects
           </h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
-          <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-projects-description">
+          <div className="w-20 h-1 bg-crimson mx-auto mb-6"></div>
+          <p className="text-light-gray max-w-2xl mx-auto" data-testid="text-projects-description">
             Here are some projects I've been working on. Each one taught me something new and helped me grow as a developer.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects && projects.length > 0 ? projects.map((project) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project) => (
             <div 
               key={project.id}
-              className="project-card bg-card rounded-xl shadow-md overflow-hidden"
+              className="project-card bg-deep-black border border-silver/20 rounded-xl overflow-hidden magnetic"
               data-testid={`card-project-${project.id}`}
             >
-              <img 
-                src={project.imageUrl}
-                alt={`${project.title} screenshot`}
-                className="w-full h-48 object-cover"
-                data-testid={`img-project-${project.id}`}
-              />
+              <div className="h-48 bg-gradient-to-br from-crimson/20 to-crimson-dark/20 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-crimson/30 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <ExternalLink className="h-8 w-8 text-crimson" />
+                  </div>
+                  <p className="text-light-gray text-sm">Project Preview</p>
+                </div>
+              </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-2" data-testid={`text-project-title-${project.id}`}>
+                <h3 className="text-xl font-semibold text-white mb-2" data-testid={`text-project-title-${project.id}`}>
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground mb-4 text-sm" data-testid={`text-project-description-${project.id}`}>
+                <p className="text-light-gray mb-4 text-sm leading-relaxed" data-testid={`text-project-description-${project.id}`}>
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span 
                       key={tech}
-                      className="bg-muted text-muted-foreground px-2 py-1 rounded text-xs"
+                      className="bg-crimson/20 text-crimson px-3 py-1 rounded-full text-xs border border-crimson/30"
                       data-testid={`tech-${tech.toLowerCase().replace(/\s+/g, '-')}-${project.id}`}
                     >
                       {tech}
@@ -119,11 +76,11 @@ export default function Projects() {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-accent hover:text-accent/80 transition-colors flex items-center gap-1"
+                      className="btn-crimson text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 magnetic"
                       data-testid={`link-demo-${project.id}`}
                     >
-                      <ExternalLink className="h-3 w-3" />
-                      <span className="text-sm">Live Demo</span>
+                      <ExternalLink className="h-4 w-4" />
+                      Live Demo
                     </a>
                   )}
                   {project.codeUrl && (
@@ -131,34 +88,35 @@ export default function Projects() {
                       href={project.codeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+                      className="border border-crimson text-crimson px-4 py-2 rounded-lg text-sm font-medium hover:bg-crimson hover:text-white transition-all flex items-center gap-2 magnetic"
                       data-testid={`link-code-${project.id}`}
                     >
-                      <Github className="h-3 w-3" />
-                      <span className="text-sm">Code</span>
+                      <Github className="h-4 w-4" />
+                      Code
                     </a>
                   )}
                 </div>
               </div>
             </div>
-          )) : (
-            <div className="col-span-full text-center text-muted-foreground">
-              <p>No featured projects available at the moment.</p>
-            </div>
-          )}
+          ))}
         </div>
         
         <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-6" data-testid="text-more-projects">
-            More projects coming soon! I'm constantly working on new challenges to expand my skills.
-          </p>
-          <a 
-            href="#"
-            className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
-            data-testid="link-view-all-projects"
-          >
-            View All Projects
-          </a>
+          <div className="bg-deep-black border border-crimson/30 rounded-xl p-6 max-w-2xl mx-auto">
+            <p className="text-light-gray mb-4" data-testid="text-more-projects">
+              More projects coming soon! I'm constantly working on new challenges to expand my skills.
+            </p>
+            <a 
+              href="https://github.com/Terence-lr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-crimson text-white px-6 py-3 rounded-lg font-medium magnetic inline-flex items-center gap-2"
+              data-testid="link-view-all-projects"
+            >
+              <Github className="h-4 w-4" />
+              View All Projects
+            </a>
+          </div>
         </div>
       </div>
     </section>

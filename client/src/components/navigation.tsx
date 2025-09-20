@@ -35,16 +35,16 @@ export default function Navigation() {
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
+    { id: "experience", label: "Experience" },
     { id: "contact", label: "Contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 backdrop-blur-md border-b border-border z-50" style={{ backgroundColor: 'rgba(26, 54, 93, 0.95)' }}>
+    <nav className="fixed top-0 left-0 right-0 backdrop-blur-md border-b border-silver/20 z-50" style={{ backgroundColor: 'rgba(13, 13, 13, 0.95)' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div 
-            className="text-xl font-bold cursor-pointer"
-            style={{ color: 'white' }}
+            className="text-xl font-bold cursor-pointer text-white hover:text-crimson transition-colors"
             onClick={() => scrollToSection("home")}
             data-testid="logo-home"
           >
@@ -57,10 +57,10 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`transition-colors ${
+                className={`nav-item transition-colors ${
                   activeSection === item.id
-                    ? "text-white font-medium"
-                    : "text-gray-300 hover:text-white"
+                    ? "text-crimson font-medium"
+                    : "text-light-gray hover:text-white"
                 }`}
                 data-testid={`nav-${item.id}`}
               >
@@ -76,7 +76,7 @@ export default function Navigation() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-64">
+            <SheetContent side="right" className="w-64 bg-deep-black border-silver/20">
               <div className="flex flex-col space-y-4 pt-8">
                 {navItems.map((item) => (
                   <button
@@ -84,8 +84,8 @@ export default function Navigation() {
                     onClick={() => scrollToSection(item.id)}
                     className={`text-left py-2 transition-colors ${
                       activeSection === item.id
-                        ? "text-blue-600 font-medium"
-                        : "text-gray-600 hover:text-blue-600"
+                        ? "text-crimson font-medium"
+                        : "text-light-gray hover:text-white"
                     }`}
                     data-testid={`nav-mobile-${item.id}`}
                   >

@@ -3,13 +3,13 @@ import aboutPhoto from "@assets/I38A1308_1757873611775.jpeg";
 
 export default function About() {
   return (
-    <section id="about" className="py-20" style={{ backgroundColor: '#f7fafc' }}>
+    <section id="about" className="py-20 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-about-title">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 section-title" data-testid="text-about-title">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-accent mx-auto"></div>
+          <div className="w-20 h-1 bg-crimson mx-auto mb-6"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -23,30 +23,30 @@ export default function About() {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-primary mb-4" data-testid="text-about-journey-title">
+            <h3 className="text-2xl font-semibold text-white mb-4" data-testid="text-about-journey-title">
               My Journey Into Tech
             </h3>
-            <p className="text-muted-foreground leading-relaxed" data-testid="text-about-paragraph-1">
+            <p className="text-light-gray leading-relaxed" data-testid="text-about-paragraph-1">
               Currently enrolled in the Pursuit AI Native coding bootcamp, I'm transitioning into tech as an AI-first developer. 
               My journey combines traditional development skills with cutting-edge AI integration and prompt engineering.
             </p>
-            <p className="text-muted-foreground leading-relaxed" data-testid="text-about-paragraph-2">
+            <p className="text-light-gray leading-relaxed" data-testid="text-about-paragraph-2">
               I'm building solutions through both hands-on development and strategic prompt engineering, 
               learning to leverage AI tools to create more efficient and innovative applications. 
               This unique approach gives me a modern perspective on problem-solving in tech.
             </p>
-            <p className="text-muted-foreground leading-relaxed" data-testid="text-about-paragraph-3">
+            <p className="text-light-gray leading-relaxed" data-testid="text-about-paragraph-3">
               I'm excited to bring my fresh perspective on AI-native development, problem-solving skills, 
               and enthusiasm for emerging technologies to a forward-thinking development team.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <div className="flex items-center gap-2 text-muted-foreground" data-testid="info-location">
-                <MapPin className="h-4 w-4 text-accent" />
+              <div className="flex items-center gap-2 text-light-gray" data-testid="info-location">
+                <MapPin className="h-4 w-4 text-crimson" />
                 <span>New York, NY</span>
               </div>
-              <div className="flex items-center gap-2 text-muted-foreground" data-testid="info-education">
-                <GraduationCap className="h-4 w-4 text-accent" />
+              <div className="flex items-center gap-2 text-light-gray" data-testid="info-education">
+                <GraduationCap className="h-4 w-4 text-crimson" />
                 <span>Pursuit AI Native Bootcamp</span>
               </div>
             </div>
