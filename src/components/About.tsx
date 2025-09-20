@@ -31,9 +31,11 @@ export default function About() {
                 <Image
                   src="/images/Terence2.jpg"
                   alt="Terence Richardson, a Navy-trained, NYC-based software builder focused on creating AI-native tools."
-                  width={300}
-                  height={300}
+                  width={400}
+                  height={400}
                   className={styles.portrait}
+                  priority
+                  sizes="(max-width: 768px) 280px, (max-width: 1024px) 320px, 400px"
                 />
               </div>
             </div>

@@ -38,15 +38,36 @@
 
 .portrait {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   height: auto;
+  aspect-ratio: 1 / 1; /* Ensure perfect circle */
   border-radius: 50%;
   box-shadow: var(--shadow-xl);
   transition: transform var(--transition-normal);
+  object-fit: cover; /* Ensure proper cropping */
+  object-position: center; /* Center the face */
 }
 
 .portrait:hover {
   transform: scale(1.02);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .portrait {
+    transition: none;
+  }
+  
+  .portrait:hover {
+    transform: none;
+  }
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
+  .portrait {
+    max-width: 280px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -65,6 +86,12 @@
   }
   
   .portrait {
-    max-width: 250px;
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portrait {
+    max-width: 400px;
   }
 }

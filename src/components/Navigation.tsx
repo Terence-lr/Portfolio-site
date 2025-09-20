@@ -26,10 +26,12 @@ export default function Navigation() {
             <div className={styles.logoImage}>
               <Image
                 src="/images/Terence2.jpg"
-                alt="Terence Richardson"
-                width={40}
-                height={40}
+                alt="Terence Richardson headshot"
+                width={32}
+                height={32}
                 className={styles.profileImage}
+                priority
+                sizes="32px"
               />
             </div>
             <span className={styles.logoText}>Terence Richardson</span>
