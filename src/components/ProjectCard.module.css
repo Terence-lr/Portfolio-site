@@ -86,6 +86,14 @@
   border: 1px solid var(--border);
 }
 
+.microTagline {
+  margin-bottom: var(--space-sm);
+  color: var(--brand);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
 .projectSummary {
   margin-bottom: var(--space-lg);
   color: var(--muted-light);

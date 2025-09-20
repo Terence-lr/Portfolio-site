@@ -31,6 +31,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <span className={styles.projectYear}>{project.year}</span>
         </div>
         
+        <p className={styles.microTagline}>{project.microTagline}</p>
         <p className={styles.projectSummary}>{project.summary}</p>
         
         <div className={styles.techStack}>

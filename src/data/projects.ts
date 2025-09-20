@@ -2,6 +2,7 @@ export interface Project {
   slug: string;
   title: string;
   summary: string;
+  microTagline: string;
   tech: string[];
   repoUrl: string;
   demoUrl: string;
@@ -25,22 +26,22 @@ export const projects: Project[] = [
   {
     slug: 'portfolio',
     title: 'Portfolio',
-    summary: 'A modern, responsive portfolio website showcasing my work and skills with clean design and smooth animations.',
-    tech: ['Next.js', 'TypeScript', 'CSS', 'Vercel'],
+    summary: 'My personal site showcasing projects, skills, and builder mindset.',
+    microTagline: 'Clean, fast, and discoverable.',
+    tech: ['Next.js', 'TypeScript', 'Pure CSS'],
     repoUrl: 'https://github.com/Terence-lr/Portfolio-site',
     demoUrl: 'https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/',
     preview: {
-      cover: '/previews/portfolio/portfolio-cover.svg',
+      cover: '/previews/portfolio/portfolio-cover.jpg',
       video: '/previews/portfolio/portfolio-loop.webm',
       gif: '/previews/portfolio/portfolio-loop.gif',
-      thumb: '/previews/portfolio/portfolio-thumb.svg'
+      thumb: '/previews/portfolio/portfolio-thumb.jpg'
     },
-    ogImage: '/previews/portfolio/portfolio-og.svg',
+    ogImage: '/previews/portfolio/portfolio-og.png',
     highlights: [
-      'Responsive design with mobile-first approach',
-      'Clean, modern UI with smooth animations',
-      'Optimized performance and accessibility',
-      'SEO-friendly with proper meta tags'
+      'Built with Next.js 14, TypeScript, and pure CSS',
+      'Responsive across devices',
+      'SEO-friendly with per-page metadata'
     ],
     role: 'Solo builder',
     year: '2024',
@@ -51,23 +52,23 @@ export const projects: Project[] = [
   },
   {
     slug: 'job-tracker',
-    title: 'Total Job Tracker',
-    summary: 'A comprehensive job application tracking system with real-time analytics and AI-powered insights for job seekers.',
-    tech: ['React', 'TypeScript', 'Supabase', 'Vercel'],
+    title: 'Job Tracker',
+    summary: 'Multi-user job-hunt dashboard to organize applications and track progress.',
+    microTagline: 'Clarity for the grind.',
+    tech: ['React', 'Firebase', 'Vercel'],
     repoUrl: 'https://github.com/Terence-lr/total-job-tracker',
     demoUrl: 'https://total-job-tracker.vercel.app',
     preview: {
-      cover: '/previews/job-tracker/job-tracker-cover.svg',
+      cover: '/previews/job-tracker/job-tracker-cover.jpg',
       video: '/previews/job-tracker/job-tracker-loop.webm',
       gif: '/previews/job-tracker/job-tracker-loop.gif',
-      thumb: '/previews/job-tracker/job-tracker-thumb.svg'
+      thumb: '/previews/job-tracker/job-tracker-thumb.jpg'
     },
-    ogImage: '/previews/job-tracker/job-tracker-og.svg',
+    ogImage: '/previews/job-tracker/job-tracker-og.png',
     highlights: [
-      'Real-time job application tracking',
-      'AI-powered resume optimization',
-      'Interview scheduling automation',
-      'Performance analytics dashboard'
+      'React + Firebase + Vercel hosting',
+      'Auth + secure storage',
+      'Filtered views and fast search'
     ],
     role: 'Solo builder',
     year: '2024',
@@ -78,23 +79,23 @@ export const projects: Project[] = [
   },
   {
     slug: 'unit-converter',
-    title: 'Distance Converter',
-    summary: 'A fast, intuitive unit conversion tool with real-time calculations and responsive design for various measurement units.',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    title: 'Unit Converter',
+    summary: 'Fast, no-frills unit converter with keyboard shortcuts.',
+    microTagline: 'Convert at the speed of thought.',
+    tech: ['React', 'TypeScript', 'PWA'],
     repoUrl: 'https://github.com/Terence-lr/distance-converter',
     demoUrl: 'https://tlr-distance-converter.replit.app/',
     preview: {
-      cover: '/previews/unit-converter/unit-converter-cover.svg',
+      cover: '/previews/unit-converter/unit-converter-cover.jpg',
       video: '/previews/unit-converter/unit-converter-loop.webm',
       gif: '/previews/unit-converter/unit-converter-loop.gif',
-      thumb: '/previews/unit-converter/unit-converter-thumb.svg'
+      thumb: '/previews/unit-converter/unit-converter-thumb.jpg'
     },
-    ogImage: '/previews/unit-converter/unit-converter-og.svg',
+    ogImage: '/previews/unit-converter/unit-converter-og.png',
     highlights: [
-      'Real-time unit conversion',
-      'Mobile-responsive design',
-      'Input validation and error handling',
-      'Clean, intuitive interface'
+      'Responsive PWA for mobile/desktop',
+      'Common conversions (length, weight, temperature, etc.)',
+      'Lightweight and instantly deployable'
     ],
     role: 'Solo builder',
     year: '2024',

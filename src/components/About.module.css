@@ -3,13 +3,24 @@
 }
 
 .content {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .title {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.aboutText {
+  max-width: 600px;
 }
 
 .description {
@@ -19,50 +30,41 @@
   color: var(--muted-light);
 }
 
-.skills {
-  margin-top: var(--space-2xl);
+.aboutImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.skillsTitle {
-  margin-bottom: var(--space-lg);
-  font-size: 1.5rem;
-  color: var(--text);
+.portrait {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: var(--shadow-xl);
+  transition: transform var(--transition-normal);
 }
 
-.skillsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: var(--space-md);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.skillTag {
-  background-color: var(--surface);
-  color: var(--text);
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-lg);
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-align: center;
-  border: 1px solid var(--border);
-  transition: all var(--transition-normal);
-}
-
-.skillTag:hover {
-  border-color: var(--brand);
-  color: var(--brand);
-  transform: translateY(-2px);
+.portrait:hover {
+  transform: scale(1.02);
 }
 
 @media (max-width: 768px) {
-  .skillsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: var(--space-sm);
+  .aboutContent {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    text-align: center;
   }
   
-  .skillTag {
-    font-size: 0.85rem;
-    padding: var(--space-xs) var(--space-sm);
+  .aboutText {
+    order: 2;
+  }
+  
+  .aboutImage {
+    order: 1;
+  }
+  
+  .portrait {
+    max-width: 250px;
   }
 }

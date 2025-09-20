@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './About.module.css';
 
 export default function About() {
@@ -7,31 +8,25 @@ export default function About() {
         <div className={styles.content}>
           <div className={styles.text}>
             <h2 className={styles.title}>
-              About <span className="text-brand">Me</span>
+              About
             </h2>
-            <p className={styles.description}>
-              I'm a passionate full-stack developer with a love for creating clean, 
-              efficient, and user-friendly web applications. With expertise in modern 
-              technologies like React, TypeScript, and Node.js, I enjoy turning complex 
-              problems into simple, beautiful solutions.
-            </p>
-            <p className={styles.description}>
-              When I'm not coding, you can find me exploring new technologies, 
-              contributing to open-source projects, or sharing knowledge with the 
-              developer community.
-            </p>
-            <div className={styles.skills}>
-              <h3 className={styles.skillsTitle}>Technologies I Work With</h3>
-              <div className={styles.skillsGrid}>
-                {[
-                  'React', 'TypeScript', 'Next.js', 'Node.js',
-                  'Supabase', 'PostgreSQL', 'Vercel', 'Git',
-                  'HTML', 'CSS', 'JavaScript', 'Python'
-                ].map((skill) => (
-                  <span key={skill} className={styles.skillTag}>
-                    {skill}
-                  </span>
-                ))}
+            <div className={styles.aboutContent}>
+              <div className={styles.aboutText}>
+                <p className={styles.description}>
+                  I'm Terence Richardson, a Navy-trained, NYC-based software builder focused on creating AI-native tools that make life simpler and more efficient. I thrive at the intersection of strategy, design, and execution — with a mindset shaped by discipline, creativity, and curiosity.
+                </p>
+                <p className={styles.description}>
+                  When I'm not coding, I'm investing in personal growth, fitness, and exploring ways technology can empower communities. My mission is to use tech not just for innovation, but for impact.
+                </p>
+              </div>
+              <div className={styles.aboutImage}>
+                <Image
+                  src="/images/Terence2.jpg"
+                  alt="Terence Richardson headshot."
+                  width={300}
+                  height={300}
+                  className={styles.portrait}
+                />
               </div>
             </div>
           </div>

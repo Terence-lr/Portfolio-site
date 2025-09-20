@@ -15,6 +15,9 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
@@ -25,6 +28,22 @@
 
 .logo:hover {
   color: var(--brand);
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+}
+
+.logoText {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .logoText {
+    display: inline;
+  }
 }
 
 .desktopNav {

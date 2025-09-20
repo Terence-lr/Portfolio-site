@@ -1,0 +1,27 @@
+.main {
+  padding: var(--space-3xl) 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: var(--space-lg);
+}
+
+.subtitle {
+  margin-bottom: var(--space-2xl);
+  color: var(--muted-light);
+  font-size: 1.125rem;
+}
+
+.downloadSection {
+  display: flex;
+  justify-content: center;
+}

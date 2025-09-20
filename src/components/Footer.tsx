@@ -52,10 +52,7 @@ export default function Footer() {
         
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © {currentYear} Terence Richardson. All rights reserved.
-          </p>
-          <p className={styles.built}>
-            Built with Next.js, TypeScript, and CSS
+            © {currentYear} Terence Richardson — Built with Next.js • Styled with Pure CSS • Crimson/Black/White Theme
           </p>
         </div>
       </div>

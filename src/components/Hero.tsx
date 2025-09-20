@@ -9,25 +9,24 @@ export default function Hero() {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <h1 className={styles.title}>
-              Hey there, I'm{' '}
-              <span className={styles.name}>Terence Richardson</span>
+              AI-Native Software Engineer & Builder in NYC
             </h1>
             <p className={styles.subtitle}>
-              Full-Stack Developer crafting modern web experiences with clean code and innovative solutions.
+              I design and ship lean, user-obsessed tools — from productivity systems to job-hunt dashboards — using modern web tech and an eye for real-world impact.
             </p>
             <div className={styles.cta}>
               <Link href="/projects" className="btn btn-primary">
-                View My Work
+                View Projects
               </Link>
               <Link href="/contact" className="btn btn-secondary">
-                Get In Touch
+                Contact
               </Link>
             </div>
           </div>
           <div className={styles.heroImage}>
             <Image
-              src="/I38A1308_1757873611775.jpeg"
-              alt="Terence Richardson"
+              src="/images/Terence1.jpeg"
+              alt="Terence Richardson smiling, NYC-based AI-native software engineer."
               width={400}
               height={400}
               priority

@@ -1,15 +1,16 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import styles from './Navigation.module.css';
 
 const navItems = [
-  { href: '/', label: 'Home' },
   { href: '/projects', label: 'Projects' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
+  { href: '/resume', label: 'Resume' },
 ];
 
 export default function Navigation() {
@@ -22,7 +23,14 @@ export default function Navigation() {
         <div className={styles.navContent}>
           {/* Logo */}
           <Link href="/" className={styles.logo}>
-            Terence Richardson
+            <Image
+              src="/images/icon.png"
+              alt="Terence Richardson"
+              width={32}
+              height={32}
+              className={styles.logoIcon}
+            />
+            <span className={styles.logoText}>Terence Richardson</span>
           </Link>
 
           {/* Desktop Navigation */}
