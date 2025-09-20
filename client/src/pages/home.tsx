@@ -1,5 +1,5 @@
 import Navigation from "@/components/navigation";
-import Hero from "@/components/hero";
+import NeuralNetworkIntro from "@/components/neural-network-intro";
 import About from "@/components/about";
 import Skills from "@/components/skills";
 import Projects from "@/components/projects";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="bg-background text-foreground">
       <Navigation />
-      <Hero />
+      <NeuralNetworkIntro />
       <About />
       <Projects />
       <Skills />
