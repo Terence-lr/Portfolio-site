@@ -222,3 +222,33 @@
     font-size: 0.8rem;
   }
 }
+
+/* Mobile-specific adjustments for primary buttons */
+@media (max-width: 640px) {
+  .button.primary.md {
+    padding: var(--space-xs) var(--space-md);
+    font-size: 0.85rem;
+    min-width: auto;
+    width: auto;
+  }
+  
+  .button.primary.sm {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.8rem;
+    min-width: auto;
+    width: auto;
+  }
+}
+
+/* Very small screens - further reduce primary button size */
+@media (max-width: 480px) {
+  .button.primary.md {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.8rem;
+  }
+  
+  .button.primary.sm {
+    padding: 6px var(--space-sm);
+    font-size: 0.75rem;
+  }
+}
