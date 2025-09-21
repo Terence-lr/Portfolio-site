@@ -161,7 +161,8 @@
   margin-top: auto;
   padding-top: var(--space-lg);
   flex-shrink: 0; /* Prevent actions from shrinking */
-  align-items: baseline;
+  align-items: center; /* Center buttons vertically */
+  justify-content: center; /* Center buttons horizontally on mobile */
 }
 
 /* Responsive breakpoints */
@@ -196,5 +197,9 @@
 @media (min-width: 1024px) {
   .projectCard {
     min-height: 650px; /* Slightly taller on larger screens */
+  }
+  
+  .projectActions {
+    justify-content: flex-start; /* Align buttons to left on desktop */
   }
 }

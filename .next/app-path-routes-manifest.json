@@ -1,1 +1,1 @@
-{"/_not-found/page":"/_not-found","/robots.txt/route":"/robots.txt","/sitemap.xml/route":"/sitemap.xml","/page":"/","/contact/page":"/contact","/projects/page":"/projects","/about/page":"/about","/projects/[slug]/page":"/projects/[slug]","/resume/page":"/resume"}
+{"/robots.txt/route":"/robots.txt","/page":"/","/_not-found/page":"/_not-found","/sitemap.xml/route":"/sitemap.xml","/about/page":"/about","/projects/page":"/projects","/resume/page":"/resume","/contact/page":"/contact","/projects/[slug]/page":"/projects/[slug]"}
