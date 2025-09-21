@@ -51,7 +51,7 @@ export default function Footer() {
                   <LinkedInIcon size={20} />
                 </a>
                 <a 
-                  href="https://x.com/terence_rich" 
+                  href="https://x.com/Terensujin" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={`${styles.link} interactive`}
