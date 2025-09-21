@@ -30,7 +30,7 @@ export const projects: Project[] = [
     microTagline: 'Clean, fast, and discoverable.',
     tech: ['Next.js', 'TypeScript', 'Pure CSS'],
     repoUrl: 'https://github.com/Terence-lr/Portfolio-site',
-    demoUrl: 'https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/',
+    demoUrl: 'https://www.trichardson.dev/',
     preview: {
       cover: '/previews/portfolio/portfolio-cover.svg',
       video: '/previews/portfolio/portfolio-loop.webm',

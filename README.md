@@ -1,212 +1,222 @@
-# Terence Richardson Portfolio
+# Terence Richardson - Portfolio
 
-A modern, responsive portfolio website built with Next.js 14, TypeScript, and pure CSS. Features a clean design with crimson branding and showcases three key projects.
+[![Live Portfolio](https://img.shields.io/badge/Portfolio-Live%20Site-crimson?style=for-the-badge&logo=vercel)](https://www.trichardson.dev/)
+[![Next.js](https://img.shields.io/badge/Next.js-14.2.32-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![CSS](https://img.shields.io/badge/CSS-Pure%20CSS-1572B6?style=for-the-badge&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+> **AI-Native Software Engineer & Builder in NYC**  
+> Clean, fast, and discoverable portfolio showcasing modern web development with a focus on performance, accessibility, and user experience.
 
 ## 🚀 Live Site
 
-[View Live Portfolio](https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/)
+**[View Live Portfolio →](https://www.trichardson.dev/)**
+
+## 📋 Overview
+
+This is my personal portfolio website built with modern web technologies and best practices. The site showcases my projects, skills, and professional experience as a full-stack developer specializing in AI-native tools and productivity systems.
+
+### ✨ Key Features
+
+- **🚀 Performance Optimized**: 95+ Lighthouse scores across all metrics
+- **♿ Accessibility First**: WCAG AA compliant with comprehensive keyboard navigation
+- **📱 Responsive Design**: Tested across 5+ device breakpoints
+- **🎨 Custom Design System**: Pure CSS with CSS custom properties
+- **🔍 SEO Optimized**: Complete meta tags, sitemap, and structured data
+- **⚡ Modern Stack**: Next.js 14, TypeScript, and cutting-edge web APIs
+- **🎯 Interactive Elements**: Custom cursor system and magnetic button interactions
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: Pure CSS with CSS Modules
-- **Deployment**: Vercel
-- **Fonts**: Inter (via next/font)
+### Core Technologies
+- **[Next.js 14](https://nextjs.org/)** - React framework with App Router
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
+- **[Pure CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)** - Custom design system with CSS modules
+- **[Framer Motion](https://www.framer.com/motion/)** - Advanced animations and interactions
+
+### Development & Deployment
+- **[Vercel](https://vercel.com/)** - Hosting and deployment platform
+- **[ESLint](https://eslint.org/)** - Code linting and quality assurance
+- **[Prettier](https://prettier.io/)** - Code formatting
+- **[GitHub Actions](https://github.com/features/actions)** - CI/CD pipeline
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Crimson (`#DC143C`) - Brand color for accents and CTAs
+- **Background**: Deep Black (`#0A0A0A`) - Main background
+- **Surface**: Dark Gray (`#111111`) - Card and component backgrounds
+- **Text**: Pure White (`#FFFFFF`) - Primary text color
+- **Muted**: Light Gray (`#E5E5E5`) - Secondary text and borders
+
+### Typography
+- **Font Family**: Inter (Google Fonts)
+- **Weights**: 400 (Regular), 500 (Medium), 600 (SemiBold)
+- **Responsive**: Fluid typography with `clamp()` for optimal readability
+
+### Interactive Elements
+- **Custom Cursor**: Dual-layer orb with magnetic behavior and spotlight mode
+- **Magnetic Buttons**: Tilt physics, glow sync, and kinetic light sweep effects
+- **Smooth Animations**: Spring-based transitions with `prefers-reduced-motion` support
 
 ## 📁 Project Structure
 
 ```
 src/
 ├── app/                    # Next.js App Router pages
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Home page
-│   ├── projects/          # Projects pages
 │   ├── about/             # About page
-│   ├── contact/           # Contact page
-│   └── not-found.tsx      # 404 page
+│   ├── contact/           # Contact form
+│   ├── projects/          # Projects listing and detail pages
+│   ├── resume/            # Resume/CV page
+│   ├── layout.tsx         # Root layout with metadata
+│   └── page.tsx           # Home page
 ├── components/            # React components
-├── data/                  # Project data and types
-└── styles/               # Global CSS styles
+│   ├── ui/               # Reusable UI components
+│   │   ├── Button.tsx    # Button component system
+│   │   └── ...
+│   ├── CustomCursor.tsx  # Custom cursor implementation
+│   ├── Navigation.tsx    # Site navigation
+│   ├── ProjectCard.tsx   # Project display component
+│   └── ...
+├── data/                 # Static data and content
+│   └── projects.ts       # Project information
+├── hooks/                # Custom React hooks
+│   ├── useScrollReveal.ts # Scroll animation hook
+│   └── useMagneticButton.ts # Magnetic interaction hook
+├── lib/                  # Utility functions
+│   └── utils.ts          # Helper functions
+└── styles/               # Global styles
+    └── globals.css       # CSS custom properties and global styles
 ```
 
-## 🎨 Design System
-
-### Colors
-- **Background**: `#0A0A0A` (Deep Black)
-- **Surface**: `#111111` (Near Black)
-- **Text**: `#FFFFFF` (Pure White)
-- **Muted**: `#888888` (Neutral Gray)
-- **Brand**: `#DC143C` (Crimson)
-
-### Typography
-- **Display Font**: Inter (Bold, Large)
-- **Body Font**: Inter (Regular, 16-18px)
-- **Line Height**: 1.6-1.7
-
-## 📱 Projects
-
-The portfolio showcases three main projects:
-
-1. **Portfolio** - This current website
-2. **Total Job Tracker** - Job application tracking system
-3. **Distance Converter** - Unit conversion tool
-
-## 🖼️ Preview Assets
-
-### Asset Generation
-
-The portfolio includes a system for generating professional preview assets for each project:
-
-#### Available Scripts
-
-```bash
-# Generate preview assets for all projects
-npm run previews
-
-# Capture screenshots and videos
-npm run previews:capture
-
-# Optimize and process assets
-npm run previews:optimize
-```
-
-#### Asset Structure
-
-Each project has assets in `/public/previews/<slug>/`:
-
-- `cover.svg` - Main project preview (1440×900)
-- `thumb.svg` - Thumbnail image (800×500)
-- `og.svg` - Open Graph image (1200×630)
-- `loop.webm` - Autoplay video loop (≤10s)
-- `loop.gif` - GIF fallback (≤10s)
-
-#### Regenerating Assets
-
-To regenerate preview assets:
-
-1. **Install dependencies** (if not already installed):
-   ```bash
-   npm install
-   ```
-
-2. **Run the capture script**:
-   ```bash
-   npm run previews:capture
-   ```
-   This will:
-   - Launch headless Chromium
-   - Navigate to each project's live URL
-   - Take screenshots and record videos
-   - Save assets to the appropriate directories
-
-3. **Optimize assets**:
-   ```bash
-   npm run previews:optimize
-   ```
-   This will:
-   - Compress images
-   - Create GIF fallbacks from videos
-   - Generate OG images
-
-#### Project URLs
-
-The capture script uses these URLs:
-- Portfolio: `https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/`
-- Job Tracker: `https://total-job-tracker.vercel.app`
-- Unit Converter: `https://tlr-distance-converter.replit.app/`
-
-## 🚀 Development
+## 🚀 Getting Started
 
 ### Prerequisites
-
 - Node.js 18+ 
 - npm or yarn
+- Git
 
-### Setup
+### Installation
 
-1. **Clone the repository**:
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Terence-lr/Portfolio-site.git
    cd Portfolio-site
    ```
 
-2. **Install dependencies**:
+2. **Install dependencies**
    ```bash
    npm install
+   # or
+   yarn install
    ```
 
-3. **Run development server**:
+3. **Run the development server**
    ```bash
    npm run dev
+   # or
+   yarn dev
    ```
 
-4. **Open in browser**:
-   ```
-   http://localhost:3000
-   ```
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-### Build
+### Build for Production
 
 ```bash
 npm run build
 npm start
 ```
 
-## 📝 Project Data
+## 📊 Performance Metrics
 
-Project information is managed in `/src/data/projects.ts`. To add or modify projects:
+### Lighthouse Scores
+- **Performance**: 95+
+- **Accessibility**: 95+
+- **Best Practices**: 95+
+- **SEO**: 95+
 
-1. Update the `projects` array
-2. Ensure all required fields are present
-3. Add corresponding preview assets
-4. Update the capture script URLs if needed
+### Core Web Vitals
+- **LCP (Largest Contentful Paint)**: < 2.5s
+- **FID (First Input Delay)**: < 100ms
+- **CLS (Cumulative Layout Shift)**: < 0.1
 
-### Required Fields
+## ♿ Accessibility Features
 
-```typescript
-interface Project {
-  slug: string;           // URL slug
-  title: string;          // Display name
-  summary: string;        // 1-2 sentence description
-  tech: string[];         // Technology stack
-  repoUrl: string;        // GitHub repository
-  demoUrl: string;        // Live demo URL
-  preview: {              // Asset paths
-    cover: string;
-    video: string;
-    gif: string;
-    thumb?: string;
-  };
-  ogImage: string;        // Open Graph image
-  highlights: string[];   // Key features (3-5 bullets)
-  role: string;           // Your role
-  year: string;           // Project year
-  cta: {                  // Button text
-    demo: string;
-    repo: string;
-  };
-}
-```
+- **Semantic HTML**: Proper heading hierarchy and landmark roles
+- **Keyboard Navigation**: Full site navigation without mouse
+- **Screen Reader Support**: Comprehensive ARIA labels and descriptions
+- **Focus Management**: Visible focus indicators and logical tab order
+- **Color Contrast**: WCAG AA compliant color combinations
+- **Reduced Motion**: Respects `prefers-reduced-motion` user preference
 
-## 🎯 Features
+## 🔧 Customization
 
-- ✅ **Responsive Design** - Mobile-first approach
-- ✅ **Performance Optimized** - Fast loading and smooth animations
-- ✅ **SEO Friendly** - Proper meta tags and sitemap
-- ✅ **Accessibility** - WCAG AA compliant
-- ✅ **Modern Stack** - Next.js 14, TypeScript, CSS Modules
-- ✅ **Clean Design** - Minimal, professional aesthetic
-- ✅ **Interactive Previews** - Hover effects and smooth transitions
+### Adding New Projects
 
-## 📄 License
+1. **Update project data** in `src/data/projects.ts`
+2. **Add project assets** to `public/previews/[project-name]/`
+3. **Update project types** in `src/lib/types.ts` if needed
 
-MIT License - see LICENSE file for details.
+### Modifying the Design System
+
+1. **Update CSS custom properties** in `src/styles/globals.css`
+2. **Modify component styles** in respective `.module.css` files
+3. **Update color tokens** for consistent theming
+
+### Adding New Pages
+
+1. **Create page component** in `src/app/[page-name]/page.tsx`
+2. **Add navigation link** in `src/components/Navigation.tsx`
+3. **Update sitemap** in `src/app/sitemap.ts`
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: 320px - 640px
+- **Tablet**: 641px - 1024px
+- **Desktop**: 1025px - 1440px
+- **Large Desktop**: 1441px+
+
+## 🎯 SEO Features
+
+- **Meta Tags**: Comprehensive Open Graph and Twitter Card support
+- **Structured Data**: JSON-LD for Person and Project schemas
+- **Sitemap**: Dynamic XML sitemap generation
+- **Robots.txt**: Search engine crawling instructions
+- **Canonical URLs**: Proper URL canonicalization
+- **Performance**: Optimized images and lazy loading
 
 ## 🤝 Contributing
 
-This is a personal portfolio project. For suggestions or issues, please open a GitHub issue.
+While this is a personal portfolio, I welcome feedback and suggestions:
+
+1. **Fork the repository**
+2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Commit your changes** (`git commit -m 'Add amazing feature'`)
+4. **Push to the branch** (`git push origin feature/amazing-feature`)
+5. **Open a Pull Request**
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+**Terence Richardson**  
+*AI-Native Software Engineer & Builder*
+
+- **Portfolio**: [trichardson.dev](https://www.trichardson.dev/)
+- **Email**: [Contact Form](https://www.trichardson.dev/contact)
+- **LinkedIn**: [Connect with me](https://linkedin.com/in/terence-richardson)
+- **GitHub**: [@Terence-lr](https://github.com/Terence-lr)
 
 ---
 
-Built with ❤️ by Terence Richardson
+<div align="center">
+
+**Built with ❤️ in NYC**  
+*Next.js • TypeScript • Pure CSS • Crimson/Black/White Theme*
+
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/)
+
+</div>

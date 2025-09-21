@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/sitemap.xml
+Sitemap: https://www.trichardson.dev/sitemap.xml

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/sitemap.xml',
+    sitemap: 'https://www.trichardson.dev/sitemap.xml',
   };
 }

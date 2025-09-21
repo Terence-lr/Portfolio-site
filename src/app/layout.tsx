@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app'),
+  metadataBase: new URL('https://www.trichardson.dev'),
   title: 'Terence Richardson - Full-Stack Developer',
   description: 'Portfolio of Terence Richardson, a full-stack developer specializing in modern web technologies and clean, efficient code.',
   keywords: ['developer', 'portfolio', 'full-stack', 'react', 'typescript', 'nextjs'],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/',
+    url: 'https://www.trichardson.dev/',
     title: 'Terence Richardson - Full-Stack Developer',
     description: 'Portfolio of Terence Richardson, a full-stack developer specializing in modern web technologies.',
     siteName: 'Terence Richardson Portfolio',
@@ -85,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        <link rel="canonical" href="https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/" />
+                <link rel="canonical" href="https://www.trichardson.dev/" />
       </head>
       <body className={inter.className}>
         <a href="#main-content" className="skip-to-content">

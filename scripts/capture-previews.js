@@ -4,7 +4,7 @@ const path = require('path');
 
 // Project URLs mapping
 const PROJECT_URLS = {
-  portfolio: 'https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/',
+  portfolio: 'https://www.trichardson.dev/',
   'job-tracker': 'https://total-job-tracker.vercel.app',
   'unit-converter': 'https://tlr-distance-converter.replit.app/'
 };

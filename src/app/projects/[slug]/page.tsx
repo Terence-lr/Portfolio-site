@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
       images: [project.ogImage],
     },
     alternates: {
-      canonical: `https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/projects/${params.slug}`,
+      canonical: `https://www.trichardson.dev/projects/${params.slug}`,
     },
   };
 }

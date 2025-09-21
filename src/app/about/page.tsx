@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: ['/previews/portfolio/portfolio-og.svg'],
   },
   alternates: {
-    canonical: 'https://portfolio-site-5a96pv9uj-terence-s-projects-e20ec262.vercel.app/about',
+    canonical: 'https://www.trichardson.dev/about',
   },
 };
 
