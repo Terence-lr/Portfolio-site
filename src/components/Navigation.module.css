@@ -128,26 +128,26 @@
 }
 
 .hamburger {
-  width: 20px;
-  height: 2px;
+  width: 2px;
+  height: 20px;
   background-color: var(--text);
   border-radius: 1px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center;
 }
 
-/* Hamburger to X animation */
+/* Vertical hamburger to X animation */
 .mobileMenuButton[aria-expanded="true"] .hamburger:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
+  transform: translateX(6px) rotate(45deg);
 }
 
 .mobileMenuButton[aria-expanded="true"] .hamburger:nth-child(2) {
   opacity: 0;
-  transform: scaleX(0);
+  transform: scaleY(0);
 }
 
 .mobileMenuButton[aria-expanded="true"] .hamburger:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translateX(-6px) rotate(-45deg);
 }
 
 .mobileNav {
@@ -220,8 +220,8 @@
   }
   
   .hamburger {
-    width: 18px;
-    height: 2px;
+    width: 2px;
+    height: 18px;
   }
 }
 

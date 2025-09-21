@@ -22,7 +22,7 @@ export default function Hero() {
             <p className={styles.subtitle}>
               I design and ship lean, user-obsessed tools — from productivity systems to job-hunt dashboards — using modern web tech and an eye for real-world impact.
             </p>
-                    <div className={`${styles.cta} scroll-reveal-stagger`}>
+                    <div className={`${styles.cta} actions scroll-reveal-stagger`}>
                       <Button
                         href="/projects"
                         variant="primary"

@@ -207,6 +207,38 @@ a:hover {
   min-width: 0;
 }
 
+/* Shared CTA button centering */
+.actions,
+.cta-row,
+.section-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* Ensure individual buttons don't fight centering */
+.btn,
+.btn-primary,
+.btn-secondary {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* If a single button sits alone in a card, ensure it auto-centers */
+.actions > *:only-child {
+  margin-inline: auto;
+}
+
+/* Section-level CTAs like "View All Projects" */
+.section-cta {
+  padding-block: 24px;
+}
+
 /* Grid */
 .grid {
   display: grid;

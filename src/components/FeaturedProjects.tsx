@@ -30,7 +30,7 @@ export default function FeaturedProjects() {
           ))}
         </div>
         
-                <div ref={viewAllRef} className={`${styles.viewAll} scroll-reveal`}>
+                <div ref={viewAllRef} className={`${styles.viewAll} section-cta scroll-reveal`}>
                   <Button
                     href="/projects"
                     variant="secondary"

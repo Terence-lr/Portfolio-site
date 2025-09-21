@@ -118,7 +118,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </ul>
         </div>
         
-        <div className={styles.projectActions}>
+        <div className={`${styles.projectActions} actions`}>
           <Button
             href={project.demoUrl}
             variant="primary"

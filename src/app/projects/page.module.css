@@ -13,20 +13,33 @@
 }
 
 .subtitle {
-  max-width: 600px;
+  max-width: 65ch;
   margin: 0 auto;
   color: var(--muted-light);
-  font-size: 1.125rem;
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--space-2xl);
+  min-width: 0; /* Prevent grid overflow */
 }
 
 @media (max-width: 768px) {
   .projectsGrid {
     grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .main {
+    padding: var(--space-2xl) 0;
+  }
+  
+  .header {
+    margin-bottom: var(--space-2xl);
   }
 }

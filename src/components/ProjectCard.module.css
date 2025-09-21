@@ -10,7 +10,8 @@
 .projectImage {
   position: relative;
   overflow: hidden;
-  height: 250px;
+  aspect-ratio: 16 / 9;
+  width: 100%;
 }
 
 .coverImage {
@@ -169,13 +170,10 @@
 }
 
 .projectActions {
-  display: flex;
-  gap: var(--space-md);
   margin-top: auto;
   padding-top: var(--space-lg);
   flex-shrink: 0; /* Prevent actions from shrinking */
-  align-items: center; /* Center buttons vertically */
-  justify-content: center; /* Center buttons horizontally on mobile */
+  min-width: 0; /* Allow text wrapping */
 }
 
 /* Responsive breakpoints */
@@ -193,9 +191,6 @@
   }
   
   .projectActions {
-    flex-direction: column;
-    gap: var(--space-sm);
-    align-items: stretch;
     padding-top: var(--space-md); /* Reduce top padding */
   }
 }
@@ -206,7 +201,6 @@
   }
   
   .projectActions {
-    gap: var(--space-xs); /* Tighter gap between buttons */
     padding-top: var(--space-sm);
   }
 }
@@ -222,9 +216,5 @@
 @media (min-width: 1024px) {
   .projectCard {
     min-height: 650px; /* Slightly taller on larger screens */
-  }
-  
-  .projectActions {
-    justify-content: flex-start; /* Align buttons to left on desktop */
   }
 }

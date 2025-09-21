@@ -45,9 +45,7 @@
 }
 
 .cta {
-  display: flex;
-  gap: var(--space-lg);
-  flex-wrap: wrap;
+  /* Styles handled by shared .actions class */
 }
 
 .heroImage {
@@ -93,7 +91,5 @@
     max-width: 300px;
   }
   
-  .cta {
-    justify-content: center;
-  }
+  /* CTA centering handled by shared .actions class */
 }
