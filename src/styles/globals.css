@@ -239,6 +239,15 @@ a:hover {
   padding-block: 24px;
 }
 
+/* Mobile button sizing for projects page */
+@media (max-width: 640px) {
+  .actions .btn,
+  .actions .button {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+}
+
 /* Grid */
 .grid {
   display: grid;

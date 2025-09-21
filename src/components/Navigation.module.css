@@ -112,13 +112,11 @@
 
 .mobileMenuButton {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
   padding: var(--space-sm);
-  min-width: 44px; /* Touch-friendly minimum size */
-  min-height: 44px;
   border-radius: var(--radius-sm);
   transition: background-color var(--transition-fast);
 }
@@ -128,26 +126,47 @@
 }
 
 .hamburger {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.bar {
+  position: absolute;
   width: 2px;
-  height: 20px;
+  height: 16px;
   background-color: var(--text);
   border-radius: 1px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Vertical hamburger to X animation */
-.mobileMenuButton[aria-expanded="true"] .hamburger:nth-child(1) {
-  transform: translateX(6px) rotate(45deg);
+.bar.left {
+  left: 4px;
+  top: 4px;
 }
 
-.mobileMenuButton[aria-expanded="true"] .hamburger:nth-child(2) {
+.bar.mid {
+  left: 11px;
+  top: 4px;
+}
+
+.bar.right {
+  right: 4px;
+  top: 4px;
+}
+
+/* Open state (T) */
+.mobileMenuButton[aria-expanded="true"] .bar.mid {
+  transform: translateX(0) scaleY(1); /* vertical stem */
+}
+
+.mobileMenuButton[aria-expanded="true"] .bar.left {
+  transform: translate(0, -6px) rotate(90deg); /* horizontal cap */
+}
+
+.mobileMenuButton[aria-expanded="true"] .bar.right {
   opacity: 0;
-  transform: scaleY(0);
-}
-
-.mobileMenuButton[aria-expanded="true"] .hamburger:nth-child(3) {
-  transform: translateX(-6px) rotate(-45deg);
+  transform: scaleY(0.2); /* hidden */
 }
 
 .mobileNav {
@@ -220,8 +239,27 @@
   }
   
   .hamburger {
-    width: 2px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .bar {
+    height: 14px;
+  }
+  
+  .bar.left {
+    left: 3px;
+    top: 3px;
+  }
+  
+  .bar.mid {
+    left: 9px;
+    top: 3px;
+  }
+  
+  .bar.right {
+    right: 3px;
+    top: 3px;
   }
 }
 
@@ -229,5 +267,12 @@
   .logoImage {
     width: 36px;
     height: 36px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .bar {
+    transition: none;
   }
 }

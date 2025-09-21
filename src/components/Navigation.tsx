@@ -115,9 +115,11 @@ export default function Navigation() {
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-nav-menu"
           >
-            <span className={styles.hamburger}></span>
-            <span className={styles.hamburger}></span>
-            <span className={styles.hamburger}></span>
+            <div className={styles.hamburger}>
+              <div className={`${styles.bar} ${styles.left}`}></div>
+              <div className={`${styles.bar} ${styles.mid}`}></div>
+              <div className={`${styles.bar} ${styles.right}`}></div>
+            </div>
           </Button>
         </div>
 
