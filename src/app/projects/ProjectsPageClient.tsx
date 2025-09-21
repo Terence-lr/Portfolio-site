@@ -22,7 +22,7 @@ export default function ProjectsPageClient() {
           </p>
         </div>
         
-        <div ref={gridRef} className={`${styles.projectsGrid} scroll-reveal-stagger`}>
+        <div ref={gridRef} className={`grid grid-3 ${styles.projectsGrid} scroll-reveal-stagger`}>
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}

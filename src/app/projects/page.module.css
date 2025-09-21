@@ -28,18 +28,10 @@
 }
 
 .projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--space-2xl);
-  min-width: 0; /* Prevent grid overflow */
+  margin-bottom: var(--space-3xl);
 }
 
 @media (max-width: 640px) {
-  .projectsGrid {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-  }
-  
   .main {
     padding: var(--space-2xl) 0;
     padding-bottom: max(24px, env(safe-area-inset-bottom));
