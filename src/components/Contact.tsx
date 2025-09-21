@@ -4,6 +4,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import Button from './ui/Button';
+import GitHubIcon from './icons/GitHubIcon';
+import LinkedInIcon from './icons/LinkedInIcon';
+import XIcon from './icons/XIcon';
 import styles from './Contact.module.css';
 
 export default function Contact() {
@@ -189,24 +192,27 @@ export default function Contact() {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={`${styles.socialLink} interactive`}
+                  aria-label="GitHub"
                 >
-                  GitHub
+                  <GitHubIcon size={24} />
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/terence-richardson-13b22a211" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={`${styles.socialLink} interactive`}
+                  aria-label="LinkedIn"
                 >
-                  LinkedIn
+                  <LinkedInIcon size={24} />
                 </a>
                 <a 
-                  href="https://x.com/terence_lr" 
+                  href="https://x.com/Terensujin" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={`${styles.socialLink} interactive`}
+                  aria-label="X (Twitter)"
                 >
-                  X (Twitter)
+                  <XIcon size={24} />
                 </a>
               </div>
             </div>

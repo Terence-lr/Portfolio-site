@@ -93,6 +93,10 @@
   padding: var(--space-2xl);
   border-radius: var(--radius-xl);
   border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .socialTitle {
@@ -102,26 +106,31 @@
 
 .socialList {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: var(--space-md);
+  justify-content: center;
+  align-items: center;
 }
 
 .socialLink {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: var(--space-md);
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   color: var(--text);
   text-decoration: none;
-  text-align: center;
-  font-weight: 500;
   transition: all var(--transition-normal);
+  min-width: 60px;
+  min-height: 60px;
 }
 
 .socialLink:hover {
   border-color: var(--brand);
   color: var(--brand);
+  background-color: rgba(220, 20, 60, 0.1);
   transform: translateY(-2px);
 }
 
