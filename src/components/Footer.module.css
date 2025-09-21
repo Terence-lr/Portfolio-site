@@ -56,8 +56,9 @@
 
 .linkList {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
+  flex-direction: row;
+  gap: var(--space-md);
+  align-items: center;
 }
 
 .link {
@@ -65,10 +66,16 @@
   text-decoration: none;
   transition: color var(--transition-fast);
   font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
 }
 
 .link:hover {
   color: var(--brand);
+  background-color: rgba(220, 20, 60, 0.1);
 }
 
 .bottom {

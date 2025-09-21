@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import GitHubIcon from './icons/GitHubIcon';
+import LinkedInIcon from './icons/LinkedInIcon';
+import XIcon from './icons/XIcon';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -34,22 +37,27 @@ export default function Footer() {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={`${styles.link} interactive`}
+                  aria-label="GitHub"
                 >
-                  GitHub
+                  <GitHubIcon size={20} />
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/terence-richardson-13b22a211" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={`${styles.link} interactive`}
+                  aria-label="LinkedIn"
                 >
-                  LinkedIn
+                  <LinkedInIcon size={20} />
                 </a>
                 <a 
-                  href="mailto:terence.richardson@example.com" 
+                  href="https://x.com/terence_rich" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className={`${styles.link} interactive`}
+                  aria-label="X (Twitter)"
                 >
-                  Email
+                  <XIcon size={20} />
                 </a>
               </div>
             </div>
