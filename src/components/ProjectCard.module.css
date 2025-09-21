@@ -57,6 +57,18 @@
   color: var(--text);
 }
 
+.viewProject.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  border-color: var(--muted);
+  color: var(--muted);
+}
+
+.viewProject.disabled:hover {
+  background-color: transparent;
+  color: var(--muted);
+}
+
 .projectContent {
   padding: var(--space-xl);
   flex: 1;

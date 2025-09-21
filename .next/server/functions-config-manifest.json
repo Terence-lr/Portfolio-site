@@ -1,1 +1,1 @@
-{"version":1,"functions":{"/projects/[slug]":{},"/resume":{},"/about":{},"/projects":{},"/contact":{}}}
+{"version":1,"functions":{"/about":{},"/contact":{},"/projects":{},"/resume":{},"/projects/[slug]":{}}}

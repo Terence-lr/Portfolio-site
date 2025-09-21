@@ -66,9 +66,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           />
         )}
         <div className={styles.projectOverlay}>
-          <Link href={`/projects/${project.slug}`} className={`${styles.viewProject} interactive`}>
-            View Details
-          </Link>
+          {project.demoUrl ? (
+            <a 
+              href={project.demoUrl} 
+              className={`${styles.viewProject} interactive`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View live demo of ${project.title}`}
+            >
+              View Live Site
+            </a>
+          ) : (
+            <span className={`${styles.viewProject} ${styles.disabled}`}>
+              Preview Coming Soon
+            </span>
+          )}
         </div>
       </div>
       
