@@ -132,13 +132,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <Button
             href={project.repoUrl}
             variant="secondary"
-            size="sm"
+            size="md"
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View source code for ${project.title} on GitHub`}
-            leftIcon={<GitHubIcon size={16} />}
           >
-            {project.cta.repo}
+            <GitHubIcon size={20} />
           </Button>
         </div>
       </div>

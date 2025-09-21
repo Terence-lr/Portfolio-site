@@ -33,6 +33,18 @@
   justify-content: center;
 }
 
+/* Icon-only button styling */
+.button:has(svg:only-child) {
+  min-width: 48px;
+  padding: var(--space-md);
+  justify-content: center;
+}
+
+.button.sm:has(svg:only-child) {
+  min-width: 44px;
+  padding: var(--space-sm);
+}
+
 .button:hover .buttonContent {
   transform: translateY(-2px);
 }
