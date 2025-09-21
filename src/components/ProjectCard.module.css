@@ -87,7 +87,7 @@
 .projectTitle {
   margin: 0;
   color: var(--text);
-  font-size: 1.5rem;
+  font-size: var(--text-2xl);
 }
 
 .projectYear {
@@ -103,7 +103,7 @@
 .microTagline {
   margin-bottom: var(--space-sm);
   color: var(--brand);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   font-style: italic;
 }
@@ -114,7 +114,8 @@
   line-height: 1.6;
   flex: 1;
   min-height: 0; /* Allow text to be scrollable if needed */
-  overflow-wrap: break-word; /* Prevent text overflow */
+  overflow-wrap: anywhere; /* Prevent text overflow */
+  max-width: 65ch;
 }
 
 .techStack {

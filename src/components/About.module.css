@@ -25,9 +25,11 @@
 
 .description {
   margin-bottom: var(--space-lg);
-  font-size: 1.125rem;
+  font-size: var(--text-lg);
   line-height: 1.7;
   color: var(--muted-light);
+  max-width: 65ch;
+  overflow-wrap: anywhere;
 }
 
 .aboutImage {
