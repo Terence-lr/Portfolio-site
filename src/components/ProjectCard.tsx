@@ -6,6 +6,7 @@ import { useState, useRef } from 'react';
 import { Project } from '@/data/projects';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import Button from './ui/Button';
+import GitHubIcon from './icons/GitHubIcon';
 import styles from './ProjectCard.module.css';
 
 interface ProjectCardProps {
@@ -131,10 +132,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <Button
             href={project.repoUrl}
             variant="secondary"
-            size="md"
+            size="sm"
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View source code for ${project.title} on GitHub`}
+            leftIcon={<GitHubIcon size={16} />}
           >
             {project.cta.repo}
           </Button>
