@@ -137,7 +137,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer"
             aria-label={`View source code for ${project.title} on GitHub`}
           >
-            <GitHubIcon size={20} />
+            <GitHubIcon size={24} />
           </Button>
         </div>
       </div>
