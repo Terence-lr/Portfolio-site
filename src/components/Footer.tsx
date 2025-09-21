@@ -2,8 +2,6 @@ import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
-  const currentYear = 2025;
-
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -59,9 +57,9 @@ export default function Footer() {
         </div>
         
         <div className={styles.bottom}>
-          <p className={styles.copyright}>
-            © {currentYear} Terence Richardson — Built with Next.js • Styled with Pure CSS • Crimson/Black/White Theme
-          </p>
+          <small className={styles.copyright} aria-label="site footer">
+            © {new Date().getFullYear()} Terence Richardson — ⚡ Running on Next.js, fueled by 🎶 & 🌙 commits.
+          </small>
         </div>
       </div>
     </footer>
