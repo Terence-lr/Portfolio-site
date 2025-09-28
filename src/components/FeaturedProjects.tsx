@@ -25,9 +25,15 @@ export default function FeaturedProjects() {
         </div>
         
         <div className={`grid grid-3 ${styles.projectsGrid} scroll-reveal-stagger`}>
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
+          {projects
+            .filter(project => 
+              project.slug === 'purple-lounge-spa' || 
+              project.slug === 'job-tracker' || 
+              project.slug === 'total-control'
+            )
+            .map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
         </div>
         
                 <div ref={viewAllRef} className={`${styles.viewAll} section-cta scroll-reveal`}>
