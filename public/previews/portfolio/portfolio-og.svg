@@ -1,7 +1,50 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="1200" height="630" fill="#0A0A0A"/>
-    <rect x="40" y="40" width="1120" height="550" rx="20" fill="#DC143C" opacity="0.1"/>
-    <rect x="40" y="40" width="1120" height="550" rx="20" stroke="#DC143C" stroke-width="3"/>
-    <text x="50%" y="45%" text-anchor="middle" fill="#DC143C" font-family="Arial, sans-serif" font-size="52.5" font-weight="bold">Portfolio</text>
-    <text x="50%" y="55%" text-anchor="middle" fill="#DC143C" font-family="Arial, sans-serif" font-size="31.5" opacity="0.7">Preview</text>
-  </svg>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a1a1a"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="100" fill="#2a1a1a"/>
+  
+  <!-- Logo/Title -->
+  <text x="60" y="60" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#dc143c">Terence Richardson</text>
+  
+  <!-- Navigation -->
+  <rect x="1000" y="30" width="120" height="50" fill="#dc143c" rx="8"/>
+  <text x="1030" y="60" font-family="Arial, sans-serif" font-size="16" fill="white">Contact</text>
+  
+  <!-- Hero Section -->
+  <rect x="60" y="150" width="1080" height="350" fill="#2a1a1a" rx="16"/>
+  
+  <!-- Hero Content -->
+  <text x="120" y="220" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">AI-Native Software</text>
+  <text x="120" y="270" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Engineer & Builder</text>
+  
+  <text x="120" y="320" font-family="Arial, sans-serif" font-size="20" fill="#ccc">Building the future with AI-powered applications</text>
+  <text x="120" y="350" font-family="Arial, sans-serif" font-size="20" fill="#ccc">and intelligent systems</text>
+  
+  <!-- CTA Button -->
+  <rect x="120" y="380" width="200" height="60" fill="#dc143c" rx="12"/>
+  <text x="180" y="420" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">View Projects</text>
+  
+  <!-- Project Grid -->
+  <rect x="60" y="530" width="200" height="80" fill="#2a1a1a" rx="8"/>
+  <rect x="80" y="550" width="160" height="40" fill="#3a2a2a" rx="4"/>
+  <text x="100" y="570" font-family="Arial, sans-serif" font-size="14" fill="white">Portfolio</text>
+  <text x="100" y="585" font-family="Arial, sans-serif" font-size="12" fill="#ccc">Next.js • TypeScript</text>
+  
+  <rect x="280" y="530" width="200" height="80" fill="#2a1a1a" rx="8"/>
+  <rect x="300" y="550" width="160" height="40" fill="#3a2a2a" rx="4"/>
+  <text x="320" y="570" font-family="Arial, sans-serif" font-size="14" fill="white">Job Tracker</text>
+  <text x="320" y="585" font-family="Arial, sans-serif" font-size="12" fill="#ccc">React • Supabase</text>
+  
+  <rect x="500" y="530" width="200" height="80" fill="#2a1a1a" rx="8"/>
+  <rect x="520" y="550" width="160" height="40" fill="#3a2a2a" rx="4"/>
+  <text x="540" y="570" font-family="Arial, sans-serif" font-size="14" fill="white">Purple Lounge</text>
+  <text x="540" y="585" font-family="Arial, sans-serif" font-size="12" fill="#ccc">E-commerce • Stripe</text>
+  
+  <!-- Tech Stack -->
+  <rect x="720" y="530" width="200" height="80" fill="#1a1a1a" stroke="#dc143c" stroke-width="2" rx="8"/>
+  <text x="740" y="550" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#dc143c">Tech Stack</text>
+  <text x="740" y="570" font-family="Arial, sans-serif" font-size="12" fill="white">Next.js • TypeScript</text>
+  <text x="740" y="585" font-family="Arial, sans-serif" font-size="12" fill="white">Pure CSS • Vercel</text>
+</svg>

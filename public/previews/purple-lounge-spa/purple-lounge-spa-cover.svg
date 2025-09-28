@@ -30,17 +30,23 @@
   <rect x="40" y="460" width="160" height="120" fill="#2a1a3a" rx="8"/>
   <rect x="60" y="480" width="120" height="60" fill="#4a2a5a" rx="4"/>
   <text x="80" y="500" font-family="Arial, sans-serif" font-size="12" fill="white">Spa Package</text>
-  <text x="80" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">$299</text>
+  <text x="80" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">$299 • 3 hours</text>
+  <text x="80" y="530" font-family="Arial, sans-serif" font-size="10" fill="#ccc">Full body treatment</text>
+  <text x="80" y="545" font-family="Arial, sans-serif" font-size="10" fill="#ccc">Premium experience</text>
   
   <rect x="220" y="460" width="160" height="120" fill="#2a1a3a" rx="8"/>
   <rect x="240" y="480" width="120" height="60" fill="#4a2a5a" rx="4"/>
   <text x="260" y="500" font-family="Arial, sans-serif" font-size="12" fill="white">Wellness Kit</text>
-  <text x="260" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">$89</text>
+  <text x="260" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">$89 • Home care</text>
+  <text x="260" y="530" font-family="Arial, sans-serif" font-size="10" fill="#ccc">Essential oils</text>
+  <text x="260" y="545" font-family="Arial, sans-serif" font-size="10" fill="#ccc">Organic products</text>
   
   <rect x="400" y="460" width="160" height="120" fill="#2a1a3a" rx="8"/>
   <rect x="420" y="480" width="120" height="60" fill="#4a2a5a" rx="4"/>
   <text x="440" y="500" font-family="Arial, sans-serif" font-size="12" fill="white">Massage</text>
-  <text x="440" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">$149</text>
+  <text x="440" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">$149 • 90 minutes</text>
+  <text x="440" y="530" font-family="Arial, sans-serif" font-size="10" fill="#ccc">Deep tissue</text>
+  <text x="440" y="545" font-family="Arial, sans-serif" font-size="10" fill="#ccc">Relaxation focus</text>
   
   <!-- Tech Stack Badge -->
   <rect x="600" y="460" width="160" height="120" fill="#1a1a1a" stroke="#dc143c" stroke-width="2" rx="8"/>

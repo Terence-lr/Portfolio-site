@@ -30,9 +30,9 @@
   <rect x="40" y="460" width="200" height="120" fill="#1a2a3a" rx="8"/>
   <rect x="60" y="480" width="160" height="20" fill="#00d4aa" rx="4"/>
   <text x="80" y="495" font-family="Arial, sans-serif" font-size="12" fill="white">Today's Focus</text>
-  <text x="80" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">8h 30m tracked</text>
-  <text x="80" y="530" font-family="Arial, sans-serif" font-size="10" fill="#ccc">3 tasks completed</text>
-  <text x="80" y="545" font-family="Arial, sans-serif" font-size="10" fill="#ccc">85% efficiency</text>
+  <text x="80" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">8h 30m tracked • 85% efficiency</text>
+  <text x="80" y="530" font-family="Arial, sans-serif" font-size="10" fill="#ccc">3 tasks completed • 2 pending</text>
+  <text x="80" y="545" font-family="Arial, sans-serif" font-size="10" fill="#ccc">Last updated: 15 minutes ago</text>
   
   <!-- Analytics Chart -->
   <rect x="260" y="460" width="200" height="120" fill="#1a2a3a" rx="8"/>
