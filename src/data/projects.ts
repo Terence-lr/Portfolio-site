@@ -73,7 +73,7 @@ export const projects: Project[] = [
     role: 'Solo builder',
     year: '2025',
     cta: {
-      demo: 'Try Demo',
+      demo: 'Try App',
       repo: 'View Source'
     }
   },
