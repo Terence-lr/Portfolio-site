@@ -1,0 +1,52 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="80" fill="#2a1a3a"/>
+  
+  <!-- Logo/Title -->
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#dc143c">Purple Lounge Spa</text>
+  
+  <!-- Navigation -->
+  <rect x="600" y="20" width="80" height="40" fill="#dc143c" rx="8"/>
+  <text x="620" y="45" font-family="Arial, sans-serif" font-size="14" fill="white">Book Now</text>
+  
+  <!-- Hero Section -->
+  <rect x="40" y="120" width="720" height="300" fill="#2a1a3a" rx="12"/>
+  
+  <!-- Hero Content -->
+  <text x="80" y="180" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white">Luxury Wellness</text>
+  <text x="80" y="220" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white">Reimagined</text>
+  
+  <text x="80" y="260" font-family="Arial, sans-serif" font-size="16" fill="#ccc">Premium spa services and wellness products</text>
+  <text x="80" y="280" font-family="Arial, sans-serif" font-size="16" fill="#ccc">delivered with elegance and care</text>
+  
+  <!-- CTA Button -->
+  <rect x="80" y="320" width="140" height="50" fill="#dc143c" rx="8"/>
+  <text x="120" y="350" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Explore Services</text>
+  
+  <!-- Product Grid Preview -->
+  <rect x="40" y="460" width="160" height="120" fill="#2a1a3a" rx="8"/>
+  <rect x="60" y="480" width="120" height="60" fill="#4a2a5a" rx="4"/>
+  <text x="80" y="500" font-family="Arial, sans-serif" font-size="12" fill="white">Spa Package</text>
+  <text x="80" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">$299</text>
+  
+  <rect x="220" y="460" width="160" height="120" fill="#2a1a3a" rx="8"/>
+  <rect x="240" y="480" width="120" height="60" fill="#4a2a5a" rx="4"/>
+  <text x="260" y="500" font-family="Arial, sans-serif" font-size="12" fill="white">Wellness Kit</text>
+  <text x="260" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">$89</text>
+  
+  <rect x="400" y="460" width="160" height="120" fill="#2a1a3a" rx="8"/>
+  <rect x="420" y="480" width="120" height="60" fill="#4a2a5a" rx="4"/>
+  <text x="440" y="500" font-family="Arial, sans-serif" font-size="12" fill="white">Massage</text>
+  <text x="440" y="515" font-family="Arial, sans-serif" font-size="10" fill="#ccc">$149</text>
+  
+  <!-- Tech Stack Badge -->
+  <rect x="600" y="460" width="160" height="120" fill="#1a1a1a" stroke="#dc143c" stroke-width="2" rx="8"/>
+  <text x="620" y="480" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc143c">Tech Stack</text>
+  <text x="620" y="500" font-family="Arial, sans-serif" font-size="10" fill="white">Next.js</text>
+  <text x="620" y="515" font-family="Arial, sans-serif" font-size="10" fill="white">TypeScript</text>
+  <text x="620" y="530" font-family="Arial, sans-serif" font-size="10" fill="white">Stripe</text>
+  <text x="620" y="545" font-family="Arial, sans-serif" font-size="10" fill="white">Vercel</text>
+</svg>

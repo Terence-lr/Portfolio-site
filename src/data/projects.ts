@@ -78,29 +78,29 @@ export const projects: Project[] = [
     }
   },
   {
-    slug: 'unit-converter',
-    title: 'Unit Converter',
-    summary: 'Fast, no-frills unit converter with keyboard shortcuts.',
-    microTagline: 'Convert at the speed of thought.',
-    tech: ['React', 'TypeScript', 'PWA'],
-    repoUrl: 'https://github.com/Terence-lr/distance-converter',
-    demoUrl: 'https://tlr-distance-converter.replit.app/',
+    slug: 'purple-lounge-spa',
+    title: 'Purple Lounge Spa',
+    summary: 'Full-stack e-commerce platform for luxury spa services and wellness products.',
+    microTagline: 'Luxury wellness, reimagined.',
+    tech: ['Next.js', 'TypeScript', 'Stripe', 'Vercel'],
+    repoUrl: 'https://github.com/Terence-lr/Purple-lounge-spa',
+    demoUrl: 'https://purple-lounge-spa.vercel.app/',
     preview: {
-      cover: '/previews/unit-converter/unit-converter-cover.svg',
-      video: '/previews/unit-converter/unit-converter-loop.webm',
-      gif: '/previews/unit-converter/unit-converter-loop.gif',
-      thumb: '/previews/unit-converter/unit-converter-thumb.svg'
+      cover: '/previews/purple-lounge-spa/purple-lounge-spa-cover.svg',
+      video: '/previews/purple-lounge-spa/purple-lounge-spa-loop.webm',
+      gif: '/previews/purple-lounge-spa/purple-lounge-spa-loop.gif',
+      thumb: '/previews/purple-lounge-spa/purple-lounge-spa-thumb.svg'
     },
-    ogImage: '/previews/unit-converter/unit-converter-og.svg',
+    ogImage: '/previews/purple-lounge-spa/purple-lounge-spa-og.svg',
     highlights: [
-      'Responsive PWA with offline functionality and <2s load time',
-      'Supports 20+ unit types with 99% accuracy',
-      'Lightweight bundle size under 50KB for instant deployment'
+      'Complete e-commerce solution with Stripe payment integration',
+      'Responsive design optimized for mobile and desktop experiences',
+      'Secure checkout process with real-time inventory management'
     ],
     role: 'Solo builder',
     year: '2025',
     cta: {
-      demo: 'Try Converter',
+      demo: 'View Live Site',
       repo: 'View Source'
     }
   }
