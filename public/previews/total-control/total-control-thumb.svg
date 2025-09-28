@@ -1,0 +1,56 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1a1a1a"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="40" fill="#1a2a3a"/>
+  
+  <!-- Logo -->
+  <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00d4aa">Total Control</text>
+  
+  <!-- Hero Section -->
+  <rect x="20" y="60" width="360" height="150" fill="#1a2a3a" rx="8"/>
+  
+  <!-- Hero Content -->
+  <text x="40" y="100" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">Master Your Time</text>
+  <text x="40" y="125" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">Master Your Life</text>
+  
+  <text x="40" y="150" font-family="Arial, sans-serif" font-size="12" fill="#ccc">Time management & productivity</text>
+  
+  <!-- CTA Button -->
+  <rect x="40" y="170" width="100" height="30" fill="#00d4aa" rx="4"/>
+  <text x="70" y="190" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Start</text>
+  
+  <!-- Dashboard Preview -->
+  <rect x="20" y="230" width="80" height="60" fill="#1a2a3a" rx="4"/>
+  <rect x="30" y="240" width="60" height="10" fill="#00d4aa" rx="2"/>
+  <text x="35" y="250" font-family="Arial, sans-serif" font-size="8" fill="white">Focus</text>
+  <text x="35" y="260" font-family="Arial, sans-serif" font-size="6" fill="#ccc">8h 30m</text>
+  <text x="35" y="270" font-family="Arial, sans-serif" font-size="6" fill="#ccc">85% eff</text>
+  
+  <!-- Analytics -->
+  <rect x="110" y="230" width="80" height="60" fill="#1a2a3a" rx="4"/>
+  <rect x="120" y="240" width="60" height="40" fill="#0a1a2a" rx="2"/>
+  <!-- Mini bar chart -->
+  <rect x="125" y="260" width="8" height="15" fill="#00d4aa"/>
+  <rect x="135" y="255" width="8" height="20" fill="#00d4aa"/>
+  <rect x="145" y="250" width="8" height="25" fill="#00d4aa"/>
+  <rect x="155" y="245" width="8" height="30" fill="#00d4aa"/>
+  <text x="130" y="285" font-family="Arial, sans-serif" font-size="6" fill="#ccc">Progress</text>
+  
+  <!-- Tasks -->
+  <rect x="200" y="230" width="80" height="60" fill="#1a2a3a" rx="4"/>
+  <rect x="210" y="240" width="60" height="8" fill="#2a3a4a" rx="1"/>
+  <text x="215" y="247" font-family="Arial, sans-serif" font-size="6" fill="white">✓ Planning</text>
+  <rect x="210" y="250" width="60" height="8" fill="#2a3a4a" rx="1"/>
+  <text x="215" y="257" font-family="Arial, sans-serif" font-size="6" fill="white">✓ Review</text>
+  <rect x="210" y="260" width="60" height="8" fill="#2a3a4a" rx="1"/>
+  <text x="215" y="267" font-family="Arial, sans-serif" font-size="6" fill="white">⏱️ Docs</text>
+  
+  <!-- Tech Badge -->
+  <rect x="290" y="230" width="90" height="60" fill="#1a1a1a" stroke="#00d4aa" stroke-width="1" rx="4"/>
+  <text x="300" y="245" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#00d4aa">Tech</text>
+  <text x="300" y="255" font-family="Arial, sans-serif" font-size="6" fill="white">Next.js</text>
+  <text x="300" y="265" font-family="Arial, sans-serif" font-size="6" fill="white">Supabase</text>
+  <text x="300" y="275" font-family="Arial, sans-serif" font-size="6" fill="white">Vercel</text>
+</svg>

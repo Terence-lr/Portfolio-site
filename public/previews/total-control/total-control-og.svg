@@ -1,0 +1,57 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a1a1a"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="100" fill="#1a2a3a"/>
+  
+  <!-- Logo/Title -->
+  <text x="60" y="60" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#00d4aa">Total Control</text>
+  
+  <!-- Navigation -->
+  <rect x="1000" y="30" width="120" height="50" fill="#00d4aa" rx="8"/>
+  <text x="1030" y="60" font-family="Arial, sans-serif" font-size="16" fill="white">Dashboard</text>
+  
+  <!-- Hero Section -->
+  <rect x="60" y="150" width="1080" height="350" fill="#1a2a3a" rx="16"/>
+  
+  <!-- Hero Content -->
+  <text x="120" y="220" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Master Your Time</text>
+  <text x="120" y="270" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Master Your Life</text>
+  
+  <text x="120" y="320" font-family="Arial, sans-serif" font-size="20" fill="#ccc">Comprehensive time management and productivity tracking</text>
+  <text x="120" y="350" font-family="Arial, sans-serif" font-size="20" fill="#ccc">application with advanced analytics</text>
+  
+  <!-- CTA Button -->
+  <rect x="120" y="380" width="200" height="60" fill="#00d4aa" rx="12"/>
+  <text x="180" y="420" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">Start Tracking</text>
+  
+  <!-- Dashboard Grid -->
+  <rect x="60" y="530" width="200" height="80" fill="#1a2a3a" rx="8"/>
+  <rect x="80" y="550" width="160" height="20" fill="#00d4aa" rx="4"/>
+  <text x="100" y="565" font-family="Arial, sans-serif" font-size="14" fill="white">Today's Focus</text>
+  <text x="100" y="580" font-family="Arial, sans-serif" font-size="12" fill="#ccc">8h 30m tracked • 85% efficiency</text>
+  
+  <rect x="280" y="530" width="200" height="80" fill="#1a2a3a" rx="8"/>
+  <rect x="300" y="550" width="160" height="40" fill="#0a1a2a" rx="4"/>
+  <!-- Bar chart -->
+  <rect x="310" y="570" width="20" height="15" fill="#00d4aa"/>
+  <rect x="340" y="565" width="20" height="20" fill="#00d4aa"/>
+  <rect x="370" y="560" width="20" height="25" fill="#00d4aa"/>
+  <rect x="400" y="555" width="20" height="30" fill="#00d4aa"/>
+  <text x="320" y="600" font-family="Arial, sans-serif" font-size="12" fill="#ccc">Weekly Progress</text>
+  
+  <rect x="500" y="530" width="200" height="80" fill="#1a2a3a" rx="8"/>
+  <rect x="520" y="550" width="160" height="15" fill="#2a3a4a" rx="2"/>
+  <text x="530" y="562" font-family="Arial, sans-serif" font-size="10" fill="white">✓ Project Planning</text>
+  <rect x="520" y="570" width="160" height="15" fill="#2a3a4a" rx="2"/>
+  <text x="530" y="582" font-family="Arial, sans-serif" font-size="10" fill="white">✓ Code Review</text>
+  <rect x="520" y="590" width="160" height="15" fill="#2a3a4a" rx="2"/>
+  <text x="530" y="602" font-family="Arial, sans-serif" font-size="10" fill="white">⏱️ Documentation</text>
+  
+  <!-- Tech Stack -->
+  <rect x="720" y="530" width="200" height="80" fill="#1a1a1a" stroke="#00d4aa" stroke-width="2" rx="8"/>
+  <text x="740" y="550" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00d4aa">Tech Stack</text>
+  <text x="740" y="570" font-family="Arial, sans-serif" font-size="12" fill="white">Next.js • TypeScript</text>
+  <text x="740" y="585" font-family="Arial, sans-serif" font-size="12" fill="white">Supabase • Vercel</text>
+</svg>

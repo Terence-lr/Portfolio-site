@@ -103,6 +103,33 @@ export const projects: Project[] = [
       demo: 'View Live Site',
       repo: 'View Source'
     }
+  },
+  {
+    slug: 'total-control',
+    title: 'Total Control',
+    summary: 'Comprehensive time management and productivity tracking application.',
+    microTagline: 'Master your time, master your life.',
+    tech: ['Next.js', 'TypeScript', 'Supabase', 'Vercel'],
+    repoUrl: 'https://github.com/Terence-lr/total-control',
+    demoUrl: 'https://total-control-six.vercel.app/auth',
+    preview: {
+      cover: '/previews/total-control/total-control-cover.svg',
+      video: '/previews/total-control/total-control-loop.webm',
+      gif: '/previews/total-control/total-control-loop.gif',
+      thumb: '/previews/total-control/total-control-thumb.svg'
+    },
+    ogImage: '/previews/total-control/total-control-og.svg',
+    highlights: [
+      'Advanced time tracking with detailed analytics and reporting',
+      'Secure user authentication with Supabase integration',
+      'Intuitive dashboard for productivity insights and goal setting'
+    ],
+    role: 'Solo builder',
+    year: '2025',
+    cta: {
+      demo: 'Try App',
+      repo: 'View Source'
+    }
   }
 ];
 
