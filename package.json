@@ -10,7 +10,8 @@
     "type-check": "tsc --noEmit",
     "previews:capture": "node scripts/capture-previews.js",
     "previews:optimize": "node scripts/optimize-previews.js",
-    "previews": "npm run previews:capture && npm run previews:optimize"
+    "previews": "npm run previews:capture && npm run previews:optimize",
+    "previews:live": "node scripts/capture-live-previews.js"
   },
   "dependencies": {
     "framer-motion": "^12.23.16",

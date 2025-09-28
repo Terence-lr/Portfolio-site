@@ -32,10 +32,10 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Terence-lr/Portfolio-site',
     demoUrl: 'https://www.trichardson.dev/',
     preview: {
-      cover: '/previews/portfolio/portfolio-cover.svg',
+      cover: '/previews/portfolio/portfolio-live-cover.png',
       video: '/previews/portfolio/portfolio-loop.webm',
       gif: '/previews/portfolio/portfolio-loop.gif',
-      thumb: '/previews/portfolio/portfolio-thumb.svg'
+      thumb: '/previews/portfolio/portfolio-live-mobile.png'
     },
     ogImage: '/previews/portfolio/portfolio-og.svg',
     highlights: [
@@ -59,10 +59,10 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Terence-lr/total-job-tracker-',
     demoUrl: 'https://total-job-tracker.vercel.app',
     preview: {
-      cover: '/previews/job-tracker/job-tracker-cover.svg',
+      cover: '/previews/job-tracker/job-tracker-live-cover.png',
       video: '/previews/job-tracker/job-tracker-loop.webm',
       gif: '/previews/job-tracker/job-tracker-loop.gif',
-      thumb: '/previews/job-tracker/job-tracker-thumb.svg'
+      thumb: '/previews/job-tracker/job-tracker-live-mobile.png'
     },
     ogImage: '/previews/job-tracker/job-tracker-og.svg',
     highlights: [
@@ -86,10 +86,10 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Terence-lr/Purple-lounge-spa',
     demoUrl: 'https://purple-lounge-spa.vercel.app/',
     preview: {
-      cover: '/previews/purple-lounge-spa/purple-lounge-spa-cover.svg',
+      cover: '/previews/purple-lounge-spa/purple-lounge-spa-live-cover.png',
       video: '/previews/purple-lounge-spa/purple-lounge-spa-loop.webm',
       gif: '/previews/purple-lounge-spa/purple-lounge-spa-loop.gif',
-      thumb: '/previews/purple-lounge-spa/purple-lounge-spa-thumb.svg'
+      thumb: '/previews/purple-lounge-spa/purple-lounge-spa-live-mobile.png'
     },
     ogImage: '/previews/purple-lounge-spa/purple-lounge-spa-og.svg',
     highlights: [
@@ -113,10 +113,10 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Terence-lr/total-control',
     demoUrl: 'https://total-control-six.vercel.app/auth',
     preview: {
-      cover: '/previews/total-control/total-control-cover.svg',
+      cover: '/previews/total-control/total-control-live-cover.png',
       video: '/previews/total-control/total-control-loop.webm',
       gif: '/previews/total-control/total-control-loop.gif',
-      thumb: '/previews/total-control/total-control-thumb.svg'
+      thumb: '/previews/total-control/total-control-live-mobile.png'
     },
     ogImage: '/previews/total-control/total-control-og.svg',
     highlights: [
