@@ -84,7 +84,7 @@ export const projects: Project[] = [
     microTagline: 'Master your time, master your life.',
     tech: ['Next.js', 'TypeScript', 'Supabase', 'Vercel'],
     repoUrl: 'https://github.com/Terence-lr/total-control',
-    demoUrl: 'https://total-control-six.vercel.app/auth',
+    demoUrl: 'https://total-control-six.vercel.app/',
     preview: {
       cover: '/previews/total-control/total-control-live-cover.png',
       video: '/previews/total-control/total-control-loop.webm',

@@ -24,7 +24,7 @@ const projects = [
   },
   {
     name: 'total-control',
-    url: 'https://total-control-six.vercel.app/auth',
+    url: 'https://total-control-six.vercel.app/',
     viewport: { width: 1200, height: 800 },
     outputDir: 'public/previews/total-control'
   }
