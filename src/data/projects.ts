@@ -78,33 +78,6 @@ export const projects: Project[] = [
     }
   },
   {
-    slug: 'purple-lounge-spa',
-    title: 'Purple Lounge Spa',
-    summary: 'Full-stack e-commerce platform for luxury spa services and wellness products.',
-    microTagline: 'Luxury wellness, reimagined.',
-    tech: ['Next.js', 'TypeScript', 'Stripe', 'Vercel'],
-    repoUrl: 'https://github.com/Terence-lr/Purple-lounge-spa',
-    demoUrl: 'https://purple-lounge-spa.vercel.app/',
-    preview: {
-      cover: '/previews/purple-lounge-spa/purple-lounge-spa-live-cover.png',
-      video: '/previews/purple-lounge-spa/purple-lounge-spa-loop.webm',
-      gif: '/previews/purple-lounge-spa/purple-lounge-spa-loop.gif',
-      thumb: '/previews/purple-lounge-spa/purple-lounge-spa-live-mobile.png'
-    },
-    ogImage: '/previews/purple-lounge-spa/purple-lounge-spa-og.svg',
-    highlights: [
-      'Complete e-commerce solution with Stripe payment integration',
-      'Responsive design optimized for mobile and desktop experiences',
-      'Secure checkout process with real-time inventory management'
-    ],
-    role: 'Solo builder',
-    year: '2025',
-    cta: {
-      demo: 'View Live Site',
-      repo: 'View Source'
-    }
-  },
-  {
     slug: 'total-control',
     title: 'Total Control',
     summary: 'Comprehensive time management and productivity tracking application.',

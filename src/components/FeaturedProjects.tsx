@@ -27,7 +27,6 @@ export default function FeaturedProjects() {
         <div className={`grid grid-3 ${styles.projectsGrid} scroll-reveal-stagger`}>
           {projects
             .filter(project => 
-              project.slug === 'purple-lounge-spa' || 
               project.slug === 'job-tracker' || 
               project.slug === 'total-control'
             )
